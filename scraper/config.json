@@ -1,0 +1,25 @@
+{
+  "teamName": "Bowlin Ashhh",
+  "sportskeep": {
+    "base": "https://results.sportskeepglobal.com/vic--box-hill-indoor-sports-centre/",
+    "sp": 41,
+    "g": 4111,
+    "s": 7912,
+    "t": 13293
+  },
+  "datascore": {
+    "base": "https://reports.datascore.com.au",
+    "teamId": 17768,
+    "gradeTopN": 100,
+    "maxGamesWithReports": 10,
+    "reports": [
+      "Captains Report",
+      "Score Sheet Report",
+      "Team Report",
+      "Player Report",
+      "Combined Player and Team Report",
+      "Combined Team and Score Sheet Report",
+      "Player Ranking Report"
+    ]
+  }
+}

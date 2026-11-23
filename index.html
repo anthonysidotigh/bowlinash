@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bowlin Ashhh · Indoor Cricket</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0c1116; --panel:#141b22; --panel2:#1a232c; --line:#25313c;
+    --text:#e8eef3; --muted:#8a9aa8; --accent:#c6f432; --accent-ink:#141b22;
+    --win:#3ddc84; --loss:#ff5c5c; --mono:'JetBrains Mono',ui-monospace,monospace;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth;scroll-padding-top:64px}
+  body{margin:0;background:var(--bg);color:var(--text);font-family:Archivo,system-ui,sans-serif;font-size:15px;line-height:1.45}
+  a{color:var(--accent)}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+
+  header{padding:32px 0 20px;border-bottom:1px solid var(--line);
+    background:radial-gradient(1200px 300px at 10% -40%,rgba(198,244,50,.18),transparent 60%)}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+  h1{font-size:clamp(38px,8vw,72px);font-weight:900;line-height:.95;margin:8px 0 10px;letter-spacing:-.02em;text-transform:uppercase}
+  h1 span{color:var(--accent)}
+  .status{display:flex;gap:8px;align-items:center;font-family:var(--mono);font-size:12px;color:var(--muted)}
+  .dot{width:8px;height:8px;border-radius:50%;background:var(--win);box-shadow:0 0 0 0 rgba(61,220,132,.6);animation:pulse 2s infinite}
+  .dot.stale{background:#f5a524;animation:none}
+  @keyframes pulse{70%{box-shadow:0 0 0 8px rgba(61,220,132,0)}100%{box-shadow:0 0 0 0 rgba(61,220,132,0)}}
+
+  nav{position:sticky;top:0;z-index:5;background:rgba(12,17,22,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;gap:6px;overflow-x:auto;padding:10px 16px;scrollbar-width:none}
+  nav a{flex:none;text-decoration:none;color:var(--text);font-size:13px;font-weight:700;padding:6px 12px;border:1px solid var(--line);border-radius:999px}
+  nav a:hover{border-color:var(--accent);color:var(--accent)}
+
+  section{padding:28px 0 8px}
+  h2{font-size:13px;font-family:var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 12px;display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+  h2 small{letter-spacing:0;text-transform:none;font-size:12px}
+
+  .hero{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:12px;margin-top:22px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px}
+  .card .k{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+  .card .big{font-size:34px;font-weight:900;line-height:1.05;margin:6px 0 4px}
+  .card .sub{color:var(--muted);font-size:13px}
+  .next{background:var(--accent);color:var(--accent-ink);border:0}
+  .next .k,.next .sub{color:rgba(20,27,34,.7)}
+  .next .big{font-size:28px;text-transform:uppercase}
+  .pill{display:inline-block;font-family:var(--mono);font-weight:700;font-size:12px;padding:3px 8px;border-radius:6px;background:var(--accent-ink);color:var(--accent);margin-top:8px}
+  .form{display:flex;gap:6px;margin-top:10px}
+  .wl{width:30px;height:30px;border-radius:8px;display:grid;place-items:center;font-weight:900;font-size:14px;color:#0c1116}
+  .wl.W{background:var(--win)}.wl.L{background:var(--loss)}.wl.D{background:#f5a524}
+
+  .tbl{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+  .scroll{overflow-x:auto;background:var(--panel);border:1px solid var(--line);border-radius:14px}
+  .tbl th,.tbl td{padding:10px 10px;text-align:right;white-space:nowrap;border-bottom:1px solid var(--line)}
+  .tbl th{font-family:var(--mono);font-size:11px;font-weight:500;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;position:sticky;top:0;background:var(--panel)}
+  .tbl td.l,.tbl th.l{text-align:left}
+  .tbl tr:last-child td{border-bottom:0}
+  .tbl tr.us td{background:rgba(198,244,50,.1)}
+  .tbl tr.us td:first-child{box-shadow:inset 3px 0 0 var(--accent)}
+  .tbl .strong{font-weight:900}
+  .neg{color:var(--loss)} .pos{color:var(--win)}
+  .num{font-family:var(--mono)}
+
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .list{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  .row{display:flex;align-items:center;gap:12px;padding:12px 14px;border-bottom:1px solid var(--line)}
+  .row:last-child{border-bottom:0}
+  .rd{font-family:var(--mono);font-size:12px;color:var(--muted);width:34px}
+  .row .main{flex:1;min-width:0}
+  .row .main b{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .row .main span{font-size:12px;color:var(--muted)}
+  .score{font-family:var(--mono);font-weight:700;font-size:15px}
+
+  .games{display:grid;gap:10px}
+  details.game{background:var(--panel);border:1px solid var(--line);border-radius:14px}
+  details.game summary{cursor:pointer;list-style:none;padding:14px;display:flex;justify-content:space-between;gap:12px;align-items:center}
+  details.game summary::-webkit-details-marker{display:none}
+  details.game summary::after{content:'+';font-family:var(--mono);color:var(--accent);font-size:20px}
+  details.game[open] summary::after{content:'–'}
+  .pdfs{display:flex;flex-wrap:wrap;gap:8px;padding:0 14px 14px}
+  .pdfs a{text-decoration:none;font-size:13px;font-weight:700;padding:8px 12px;border-radius:8px;background:var(--panel2);border:1px solid var(--line);color:var(--text)}
+  .pdfs a:hover{border-color:var(--accent);color:var(--accent)}
+  .note{color:var(--muted);font-size:13px;padding:0 14px 14px}
+
+  .btn{font:inherit;font-size:13px;font-weight:700;background:none;color:var(--accent);border:1px solid var(--line);border-radius:999px;padding:6px 14px;cursor:pointer;margin-top:10px}
+  .err{background:#3a1c1c;border:1px solid #6b2b2b;color:#ffb4b4;border-radius:10px;padding:10px 14px;font-size:13px;margin-top:16px}
+  footer{margin:40px 0 0;padding:24px 0 40px;border-top:1px solid var(--line);color:var(--muted);font-size:12px}
+  .empty{padding:16px;color:var(--muted)}
+
+  @media (max-width:760px){
+    .hero{grid-template-columns:1fr 1fr}.hero .next{grid-column:1/-1}
+    .grid2{grid-template-columns:1fr}
+    .tbl{font-size:13px}
+    .tbl th,.tbl td{padding:9px 6px}
+    .tbl th{font-size:10px;letter-spacing:0}
+    .hide-sm{display:none}
+    h2{flex-direction:column;gap:2px}
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="eyebrow" id="comp">Indoor cricket · Box Hill</div>
+    <h1 id="team">Bowlin <span>Ashhh</span></h1>
+    <div class="status"><i class="dot" id="dot"></i><span id="updated">Loading…</span></div>
+    <div id="errors"></div>
+    <div class="hero" id="hero"></div>
+  </div>
+</header>
+
+<nav><div class="wrap">
+  <a href="#ladder">Ladder</a><a href="#games">Results &amp; fixture</a><a href="#players">Our players</a>
+  <a href="#grade">Grade leaders</a><a href="#reports">Game reports</a>
+</div></nav>
+
+<main class="wrap">
+  <section id="ladder"><h2>Ladder <small id="ladderComp"></small></h2><div class="scroll" id="ladderTbl"></div></section>
+
+  <section id="games"><div class="grid2">
+    <div><h2>Results</h2><div class="list" id="results"></div></div>
+    <div><h2>Upcoming</h2><div class="list" id="fixture"></div></div>
+  </div></section>
+
+  <section id="players"><h2>Our players <small id="teamInfo"></small></h2><div class="scroll" id="playersTbl"></div></section>
+
+  <section id="grade"><h2>Grade leaders <small id="gradeInfo"></small></h2>
+    <div class="scroll" id="gradeTbl"></div>
+    <button class="btn" id="moreGrade">Show top 100</button>
+  </section>
+
+  <section id="reports"><h2>Game reports <small>PDFs from Datascore</small></h2><div class="games" id="gamesList"></div></section>
+</main>
+
+<footer><div class="wrap" id="foot"></div></footer>
+
+<script>
+const REFRESH_MS = 5 * 60 * 1000;
+let DATA = null, gradeLimit = 10;
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const fmt = (n, dp = 1) => typeof n === 'number' ? (Number.isInteger(n) ? n : n.toFixed(dp)) : esc(n);
+const sign = n => typeof n === 'number' ? (n < 0 ? 'neg' : n > 0 ? 'pos' : '') : '';
+const same = (a, b) => String(a).trim().toUpperCase() === String(b).trim().toUpperCase();
+const ord = n => n + (['th','st','nd','rd'][(n % 100 - 20) % 10] || ['th','st','nd','rd'][n % 100] || 'th');
+
+// "26 Nov 26" + "8:15pm" -> Date (local time)
+function skDate(d, t = '') {
+  const m = /(\d{1,2}) (\w{3}) (\d{2})/.exec(d || ''); if (!m) return null;
+  const mon = 'JanFebMarAprMayJunJulAugSepOctNovDec'.indexOf(m[2]) / 3;
+  const tm = /(\d{1,2}):(\d{2})\s*(am|pm)/i.exec(t || '');
+  let h = tm ? +tm[1] % 12 + (/pm/i.test(tm[3]) ? 12 : 0) : 0;
+  return new Date(2000 + +m[3], mon, +m[1], h, tm ? +tm[2] : 0);
+}
+function ago(iso) {
+  const s = (Date.now() - new Date(iso)) / 1000;
+  if (s < 90) return 'just now';
+  if (s < 3600) return Math.round(s / 60) + ' min ago';
+  if (s < 86400) return Math.round(s / 3600) + ' h ago';
+  return Math.round(s / 86400) + ' days ago';
+}
+function until(date) {
+  const days = Math.round((new Date(date).setHours(0,0,0,0) - new Date().setHours(0,0,0,0)) / 864e5);
+  return days === 0 ? 'Today' : days === 1 ? 'Tomorrow' : days > 1 ? `In ${days} days` : '';
+}
+
+function render() {
+  const d = DATA, team = d.teamName || 'Our team';
+  const parts = team.split(' ');
+  $('team').innerHTML = esc(parts[0]) + (parts.length > 1 ? ' <span>' + esc(parts.slice(1).join(' ')) + '</span>' : '');
+  document.title = team + ' · Indoor Cricket';
+  $('comp').textContent = (d.competition || 'Indoor cricket') + ' · Box Hill';
+  $('ladderComp').textContent = d.competition || '';
+  $('updated').textContent = d.updatedAt ? 'Data last changed ' + ago(d.updatedAt) + ' · checks every ~5 min' : '';
+  $('errors').innerHTML = d.errors ? Object.entries(d.errors).map(([k, v]) =>
+    `<div class="err">Couldn't refresh <b>${esc(k)}</b> on the last run, so this part shows the previous data. (${esc(v)})</div>`).join('') : '';
+
+  // ---- hero
+  const us = (d.ladder || []).find(r => same(r.team, team));
+  const next = (d.fixture || []).map(f => ({...f, when: skDate(f.date, f.time)}))
+    .filter(f => !f.when || f.when > Date.now() - 3 * 3600e3)[0];
+  const form = (d.results || []).slice(-5);
+  $('hero').innerHTML = `
+    <div class="card next">
+      <div class="k">Next game${next ? ' · Round ' + esc(next.round) : ''}</div>
+      ${next ? `<div class="big">vs ${esc(next.opponent)}</div>
+        <div class="sub">${esc(next.day)} ${esc(next.date)} · ${esc(next.time)} · ${esc(next.court)}</div>
+        ${next.when && until(next.when) ? `<span class="pill">${until(next.when)}</span>` : ''}`
+      : '<div class="big">TBC</div><div class="sub">No upcoming games listed</div>'}
+    </div>
+    <div class="card"><div class="k">Ladder</div>
+      <div class="big">${us ? ord(us.pos) : '–'}</div>
+      <div class="sub">${us ? `of ${d.ladder.length} · ${us.pts} pts · ${fmt(us.pct, 2)}%` : ''}</div></div>
+    <div class="card"><div class="k">Form</div>
+      <div class="big">${us ? `${us.w}–${us.l}${us.d ? '–' + us.d : ''}` : '–'}</div>
+      <div class="form">${form.map(r => { const c = /win/i.test(r.result) ? 'W' : /draw/i.test(r.result) ? 'D' : 'L';
+        return `<span class="wl ${c}" title="${esc(r.opponent)} ${esc(r.score)}">${c}</span>`; }).join('')}</div></div>`;
+
+  // ---- ladder
+  $('ladderTbl').innerHTML = (d.ladder || []).length ? `<table class="tbl"><thead><tr>
+    <th class="l">#</th><th class="l">Team</th><th>P</th><th>W</th><th>L</th><th class="hide-sm">D</th>
+    <th class="hide-sm">For</th><th class="hide-sm">Agst</th><th>%</th><th class="hide-sm">Bonus</th><th>Pts</th></tr></thead><tbody>
+    ${d.ladder.map(r => `<tr class="${same(r.team, team) ? 'us' : ''}">
+      <td class="l num">${esc(r.pos)}</td><td class="l strong">${esc(r.team)}</td><td>${r.p}</td><td>${r.w}</td><td>${r.l}</td>
+      <td class="hide-sm">${r.d}</td><td class="hide-sm">${r.for}</td><td class="hide-sm">${r.against}</td>
+      <td>${fmt(r.pct, 2)}</td><td class="hide-sm">${r.bonus}</td><td class="strong">${r.pts}</td></tr>`).join('')}
+    </tbody></table>` : '<div class="empty">No ladder yet.</div>';
+
+  // ---- results & fixture
+  $('results').innerHTML = (d.results || []).slice().reverse().map(r => {
+    const c = /win/i.test(r.result) ? 'W' : /draw/i.test(r.result) ? 'D' : 'L';
+    return `<div class="row"><span class="rd">R${esc(r.round)}</span>
+      <div class="main"><b>${esc(r.opponent)}</b><span>${esc(r.date)} · ${esc(r.points)} pts</span></div>
+      <span class="score">${esc(r.score)}</span><span class="wl ${c}">${c}</span></div>`;
+  }).join('') || '<div class="empty">No results yet.</div>';
+  $('fixture').innerHTML = (d.fixture || []).map(f => `<div class="row"><span class="rd">R${esc(f.round)}</span>
+      <div class="main"><b>${esc(f.opponent)}</b><span>${esc(f.day)} ${esc(f.date)} · ${esc(f.court)}</span></div>
+      <span class="score">${esc(f.time)}</span></div>`).join('') || '<div class="empty">No upcoming games listed.</div>';
+
+  // ---- players (team) with their rank across the whole grade
+  $('teamInfo').textContent = d.teamInfo || '';
+  const gradeRank = p => (d.gradeTop || []).find(g => same(g.name, p.name) && same(g.team, p.team))?.rank;
+  const players = (d.teamPlayers || []).slice().sort((a, b) => b.avgNgv - a.avgNgv);
+  $('playersTbl').innerHTML = players.length ? `<table class="tbl"><thead><tr>
+    <th class="l">Player</th><th>Gms</th><th>Runs</th><th class="hide-sm">Outs</th><th>Wkts</th>
+    <th class="hide-sm">Runs agst</th><th class="hide-sm">NGV</th><th>Avg NGV</th><th>Grade rank</th></tr></thead><tbody>
+    ${players.map(p => { const gr = gradeRank(p); return `<tr>
+      <td class="l strong">${esc(p.name)}</td><td>${p.games}</td><td>${p.netRuns}</td><td class="hide-sm">${p.outs ?? ''}</td>
+      <td>${p.wickets}</td><td class="hide-sm">${p.runsAgainst}</td><td class="hide-sm ${sign(p.ngv)}">${p.ngv}</td>
+      <td class="strong ${sign(p.avgNgv)}">${fmt(p.avgNgv)}</td>
+      <td class="num">${gr ? gr + (d.gradeCount ? `<span style="color:var(--muted)">/${d.gradeCount}</span>` : '') : '–'}</td></tr>`; }).join('')}
+    </tbody></table>` : '<div class="empty">No player stats yet.</div>';
+
+  // ---- grade leaders
+  $('gradeInfo').textContent = d.gradeInfo || '';
+  const top = (d.gradeTop || []).filter(p => p.rank <= gradeLimit || same(p.team, team));
+  $('gradeTbl').innerHTML = top.length ? `<table class="tbl"><thead><tr>
+    <th class="l">#</th><th class="l">Player</th><th class="l hide-sm">Team</th><th class="hide-sm">Gms</th><th>Runs</th><th>Wkts</th><th>Avg NGV</th></tr></thead><tbody>
+    ${top.map((p, i) => `${i && p.rank - top[i - 1].rank > 1 ? '<tr><td colspan="7" class="l" style="color:var(--muted);text-align:center">⋯</td></tr>' : ''}
+      <tr class="${same(p.team, team) ? 'us' : ''}"><td class="l num">${p.rank}</td>
+      <td class="l strong">${esc(p.name)}</td><td class="l hide-sm">${esc(p.team)}</td><td class="hide-sm">${p.games}</td>
+      <td>${p.netRuns}</td><td>${p.wickets}</td><td class="strong ${sign(p.avgNgv)}">${fmt(p.avgNgv)}</td></tr>`).join('')}
+    </tbody></table>` : '<div class="empty">No grade stats yet.</div>';
+  const maxRank = Math.max(0, ...(d.gradeTop || []).filter(p => !same(p.team, team)).map(p => p.rank));
+  $('moreGrade').style.display = maxRank > 10 ? '' : 'none';
+  $('moreGrade').textContent = gradeLimit > 10 ? 'Show top 10' : `Show top ${maxRank}`;
+
+  // ---- game reports
+  const names = {'captains-report':'Captains','score-sheet-report':'Score sheet','team-report':'Team',
+    'player-report':'Player','combined-player-and-team-report':'Player + team',
+    'combined-team-and-score-sheet-report':'Team + score sheet','player-ranking-report':'Player ranking'};
+  $('gamesList').innerHTML = (d.games || []).map((g, i) => {
+    const reps = Object.entries(g.reports || {});
+    const dt = new Date(g.date + 'T00:00');
+    return `<details class="game" ${i === 0 ? 'open' : ''}><summary><div class="main">
+        <b>vs ${esc(g.opponent)}</b><span style="display:block;color:var(--muted);font-size:12px">
+        ${dt.toLocaleDateString('en-AU', {weekday:'short', day:'numeric', month:'short', year:'numeric'})} · ${esc(g.time)}</span></div></summary>
+      ${reps.length ? `<div class="pdfs">${reps.map(([k, p]) => `<a href="${esc(p)}" target="_blank" rel="noopener">${esc(names[k] || k)} ↗</a>`).join('')}</div>`
+        : `<div class="note">PDFs will appear here after the scraper's next run. In the meantime they're on <a href="${esc(d.sources?.datascore || '#')}" target="_blank" rel="noopener">Datascore</a>.</div>`}
+    </details>`;
+  }).join('') || '<div class="empty">No games yet.</div>';
+
+  $('foot').innerHTML = `Unofficial team page. Ladder, fixture and results from
+    <a href="${esc(d.sources?.ladder || '#')}" target="_blank" rel="noopener">SportsKeep</a>; player stats and reports from
+    <a href="${esc(d.sources?.datascore || '#')}" target="_blank" rel="noopener">Datascore</a>.`;
+}
+
+async function load() {
+  try {
+    const r = await fetch('data/data.json?t=' + Date.now(), {cache: 'no-store'});
+    DATA = await r.json();
+    render();
+    $('dot').classList.toggle('stale', !DATA.updatedAt || Date.now() - new Date(DATA.updatedAt) > 7 * 864e5);
+  } catch (e) {
+    $('updated').textContent = "Couldn't load data.json: " + e.message;
+    $('dot').classList.add('stale');
+  }
+}
+$('moreGrade').onclick = () => { gradeLimit = gradeLimit > 10 ? 10 : 1e9; render(); };
+load();
+setInterval(load, REFRESH_MS);
+setInterval(() => DATA && DATA.updatedAt && ($('updated').textContent = 'Data last changed ' + ago(DATA.updatedAt) + ' · checks every ~5 min'), 30000);
+</script>
+</body>
+</html>
