@@ -21,6 +21,7 @@ ROOT = Path(__file__).resolve().parent.parent
 CFG = json.loads((ROOT / "scraper" / "config.json").read_text())
 DATA_FILE = ROOT / "data" / "data.json"
 REPORTS_DIR = ROOT / "reports"
+DEBUG_DIR = Path("/tmp/scrape-debug")  # outside the repo, so it is never committed
 
 # ---------------------------------------------------------------- helpers
 
@@ -179,16 +180,34 @@ def parse_game(label):
 
 
 def open_game_list(page):
-    page.click("input.mud-select-input")
-    page.wait_for_selector(".mud-popover-open .mud-list-item", timeout=30000)
-    return page.locator(".mud-popover-open .mud-list-item")
+    """Open the 'Select Game...' dropdown. The game list loads over a slow connection
+    (GitHub runs in the US, Datascore is in Australia), so clicking too early opens an
+    empty list. Close and retry until the games show up."""
+    inp = page.locator("input.mud-select-input").first
+    items = page.locator(".mud-popover-open .mud-list-item")
+    for attempt in range(6):
+        if attempt % 2 == 0:
+            inp.click()
+        else:
+            inp.focus()
+            page.keyboard.press("ArrowDown")
+        try:
+            items.first.wait_for(state="visible", timeout=10000)
+            return items
+        except Exception:
+            print(f"  game list not ready (attempt {attempt + 1}), retrying")
+            page.keyboard.press("Escape")
+            page.mouse.click(5, 5)
+            page.wait_for_timeout(3000)
+    raise RuntimeError("Datascore game list never appeared")
 
 
 def scrape_reports(page, previous_games):
     c = CFG["datascore"]
     page.goto(f"{c['base']}/IndoorCricket/TeamReports/{c['teamId']}")
+    page.wait_for_selector("text=Team Reports For Team", timeout=60000)
     page.wait_for_selector("input.mud-select-input", timeout=60000)
-    page.wait_for_timeout(1000)
+    page.wait_for_timeout(4000)  # let Blazor finish loading the game list
 
     labels = [s.strip() for s in open_game_list(page).all_inner_texts()]
     page.keyboard.press("Escape")
@@ -257,6 +276,12 @@ def main():
             except Exception as e:
                 traceback.print_exc()
                 errors[name] = str(e).splitlines()[0][:300]
+                # Screenshot of what the scraper saw; the workflow uploads it as an artifact.
+                try:
+                    DEBUG_DIR.mkdir(parents=True, exist_ok=True)
+                    page.screenshot(path=str(DEBUG_DIR / f"{name}.png"), full_page=True)
+                except Exception:
+                    pass
         browser.close()
 
     new["teamName"] = CFG["teamName"]
