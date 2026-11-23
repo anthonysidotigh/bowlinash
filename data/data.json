@@ -2069,7 +2069,7 @@
   "datascore": "https://reports.datascore.com.au/IndoorCricket/TeamReports/17768"
  },
  "errors": {
-  "reports": "Page.wait_for_selector: Timeout 30000ms exceeded."
+  "reports": "Datascore game list never appeared"
  },
- "updatedAt": "2026-11-23T11:33:16+00:00"
+ "updatedAt": "2026-11-23T12:07:15+00:00"
 }
