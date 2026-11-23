@@ -280,7 +280,7 @@
    "sevens": 0
   }
  ],
- "teamInfo": "Showing team data from 27/05/2026 to 23/11/2026.",
+ "teamInfo": "Showing team data from 28/05/2026 to 24/11/2026.",
  "gradeTop": [
   {
    "rank": 1,
@@ -1980,7 +1980,7 @@
   }
  ],
  "gradeCount": 1129,
- "gradeInfo": "Showing grade data from 27/05/2026 to 23/11/2026.",
+ "gradeInfo": "Showing grade data from 28/05/2026 to 24/11/2026.",
  "games": [
   {
    "key": "2026-11-18_0916_sloggers-8-0",
@@ -2071,5 +2071,5 @@
  "errors": {
   "reports": "Datascore game list never appeared"
  },
- "updatedAt": "2026-11-23T12:07:15+00:00"
+ "updatedAt": "2026-11-23T13:54:39+00:00"
 }
