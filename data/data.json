@@ -476,22 +476,6 @@
   },
   {
    "rank": 13,
-   "name": "Paul Chin",
-   "team": "DREAMERS",
-   "runsScored": 583,
-   "outs": 31,
-   "netRuns": 475,
-   "runsAgainst": 68,
-   "wickets": 37,
-   "ngv": 407,
-   "games": 18,
-   "avgNgv": 22.61,
-   "fours": 17,
-   "fives": 13,
-   "sevens": 18
-  },
-  {
-   "rank": 14,
    "name": "Fahad Y",
    "team": "MARKHOR",
    "runsScored": 62,
@@ -505,6 +489,22 @@
    "fours": 2,
    "fives": 0,
    "sevens": 5
+  },
+  {
+   "rank": 14,
+   "name": "Paul Chin",
+   "team": "DREAMERS",
+   "runsScored": 556,
+   "outs": 31,
+   "netRuns": 448,
+   "runsAgainst": 70,
+   "wickets": 35,
+   "ngv": 378,
+   "games": 17,
+   "avgNgv": 22.24,
+   "fours": 16,
+   "fives": 13,
+   "sevens": 17
   },
   {
    "rank": 15,
@@ -1883,7 +1883,7 @@
    "sevens": 11
   },
   {
-   "rank": 157,
+   "rank": 156,
    "name": "James Roche",
    "team": "BOWLIN ASHHH",
    "runsScored": 35,
@@ -1899,7 +1899,7 @@
    "sevens": 0
   },
   {
-   "rank": 295,
+   "rank": 294,
    "name": "John Korasidis",
    "team": "BOWLIN ASHHH",
    "runsScored": 68,
@@ -1915,7 +1915,7 @@
    "sevens": 0
   },
   {
-   "rank": 299,
+   "rank": 298,
    "name": "Liam Roche",
    "team": "BOWLIN ASHHH",
    "runsScored": 125,
@@ -1931,7 +1931,7 @@
    "sevens": 3
   },
   {
-   "rank": 345,
+   "rank": 343,
    "name": "Steven Boscacci",
    "team": "BOWLIN ASHHH",
    "runsScored": 138,
@@ -1979,7 +1979,7 @@
    "sevens": 0
   }
  ],
- "gradeCount": 1129,
+ "gradeCount": 1126,
  "gradeInfo": "Showing grade data from 28/05/2026 to 24/11/2026.",
  "games": [
   {
@@ -2071,5 +2071,5 @@
  "errors": {
   "reports": "Datascore game list never appeared"
  },
- "updatedAt": "2026-11-23T13:54:39+00:00"
+ "updatedAt": "2026-11-24T08:02:17+00:00"
 }
