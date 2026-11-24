@@ -780,6 +780,22 @@
   },
   {
    "rank": 32,
+   "name": "Varun K",
+   "team": "EASTERN EAGLES",
+   "runsScored": 592,
+   "outs": 31,
+   "netRuns": 472,
+   "runsAgainst": 141,
+   "wickets": 32,
+   "ngv": 331,
+   "games": 17,
+   "avgNgv": 19.47,
+   "fours": 7,
+   "fives": 8,
+   "sevens": 37
+  },
+  {
+   "rank": 33,
    "name": "Aidan Morton",
    "team": "ASHWOOD CRICKET CLUB",
    "runsScored": 339,
@@ -793,22 +809,6 @@
    "fours": 9,
    "fives": 5,
    "sevens": 11
-  },
-  {
-   "rank": 33,
-   "name": "Varun K",
-   "team": "EASTERN EAGLES",
-   "runsScored": 617,
-   "outs": 35,
-   "netRuns": 482,
-   "runsAgainst": 144,
-   "wickets": 33,
-   "ngv": 338,
-   "games": 18,
-   "avgNgv": 18.78,
-   "fours": 8,
-   "fives": 8,
-   "sevens": 38
   },
   {
    "rank": 34,
@@ -876,6 +876,22 @@
   },
   {
    "rank": 38,
+   "name": "Kishan Panchal",
+   "team": "SNAIL MAIL",
+   "runsScored": 382,
+   "outs": 20,
+   "netRuns": 307,
+   "runsAgainst": 83,
+   "wickets": 19,
+   "ngv": 224,
+   "games": 12,
+   "avgNgv": 18.67,
+   "fours": 8,
+   "fives": 6,
+   "sevens": 14
+  },
+  {
+   "rank": 39,
    "name": "Ashwin Amin",
    "team": "PACKAGE",
    "runsScored": 79,
@@ -891,7 +907,7 @@
    "sevens": 4
   },
   {
-   "rank": 39,
+   "rank": 40,
    "name": "Xavier Buxton",
    "team": "D.C.M",
    "runsScored": 408,
@@ -907,7 +923,7 @@
    "sevens": 12
   },
   {
-   "rank": 40,
+   "rank": 41,
    "name": "Ansh Lalani",
    "team": "OZ CONSULTANCY",
    "runsScored": 62,
@@ -921,22 +937,6 @@
    "fours": 3,
    "fives": 0,
    "sevens": 4
-  },
-  {
-   "rank": 41,
-   "name": "Kishan Panchal",
-   "team": "SNAIL MAIL",
-   "runsScored": 406,
-   "outs": 21,
-   "netRuns": 328,
-   "runsAgainst": 95,
-   "wickets": 20,
-   "ngv": 233,
-   "games": 13,
-   "avgNgv": 17.92,
-   "fours": 8,
-   "fives": 6,
-   "sevens": 16
   },
   {
    "rank": 42,
@@ -1899,7 +1899,7 @@
    "sevens": 0
   },
   {
-   "rank": 294,
+   "rank": 296,
    "name": "John Korasidis",
    "team": "BOWLIN ASHHH",
    "runsScored": 68,
@@ -1915,7 +1915,7 @@
    "sevens": 0
   },
   {
-   "rank": 298,
+   "rank": 299,
    "name": "Liam Roche",
    "team": "BOWLIN ASHHH",
    "runsScored": 125,
@@ -1931,7 +1931,7 @@
    "sevens": 3
   },
   {
-   "rank": 343,
+   "rank": 342,
    "name": "Steven Boscacci",
    "team": "BOWLIN ASHHH",
    "runsScored": 138,
@@ -1947,7 +1947,7 @@
    "sevens": 7
   },
   {
-   "rank": 539,
+   "rank": 537,
    "name": "Alex Desaram",
    "team": "BOWLIN ASHHH",
    "runsScored": 129,
@@ -2071,5 +2071,5 @@
  "errors": {
   "reports": "Datascore game list never appeared"
  },
- "updatedAt": "2026-11-24T09:00:06+00:00"
+ "updatedAt": "2026-11-24T10:01:45+00:00"
 }
