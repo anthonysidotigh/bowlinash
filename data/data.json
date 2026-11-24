@@ -1676,6 +1676,22 @@
   },
   {
    "rank": 88,
+   "name": "Richard Moulding",
+   "team": "LADS",
+   "runsScored": 260,
+   "outs": 6,
+   "netRuns": 230,
+   "runsAgainst": 82,
+   "wickets": 18,
+   "ngv": 148,
+   "games": 11,
+   "avgNgv": 13.45,
+   "fours": 9,
+   "fives": 9,
+   "sevens": 6
+  },
+  {
+   "rank": 89,
    "name": "Shamil 07/09/1994",
    "team": "FIRE MMA",
    "runsScored": 142,
@@ -1691,7 +1707,7 @@
    "sevens": 5
   },
   {
-   "rank": 89,
+   "rank": 90,
    "name": "Ninad Ninad",
    "team": "VISION BUILDERS",
    "runsScored": 94,
@@ -1707,7 +1723,7 @@
    "sevens": 4
   },
   {
-   "rank": 90,
+   "rank": 91,
    "name": "Anand Lalani",
    "team": "FALCON INSTITUTE - MIPL",
    "runsScored": 71,
@@ -1723,7 +1739,23 @@
    "sevens": 2
   },
   {
-   "rank": 91,
+   "rank": 92,
+   "name": "Aditya Sharma",
+   "team": "BALL BUSTERS",
+   "runsScored": 108,
+   "outs": 6,
+   "netRuns": 84,
+   "runsAgainst": 31,
+   "wickets": 6,
+   "ngv": 53,
+   "games": 4,
+   "avgNgv": 13.25,
+   "fours": 1,
+   "fives": 1,
+   "sevens": 5
+  },
+  {
+   "rank": 93,
    "name": "Mohit Suresh",
    "team": "POWERHOUSE",
    "runsScored": 361,
@@ -1739,7 +1771,7 @@
    "sevens": 21
   },
   {
-   "rank": 92,
+   "rank": 94,
    "name": "Aiden Lord",
    "team": "CHUCKERS",
    "runsScored": 389,
@@ -1755,7 +1787,7 @@
    "sevens": 18
   },
   {
-   "rank": 93,
+   "rank": 95,
    "name": "Bilal Ahmed",
    "team": "PACKAGE",
    "runsScored": 384,
@@ -1771,7 +1803,7 @@
    "sevens": 15
   },
   {
-   "rank": 94,
+   "rank": 96,
    "name": "Aftab Pabani",
    "team": "MONEYQUEST",
    "runsScored": 171,
@@ -1787,7 +1819,7 @@
    "sevens": 8
   },
   {
-   "rank": 95,
+   "rank": 97,
    "name": "Asif Taj",
    "team": "VISION CONSULTANTS",
    "runsScored": 86,
@@ -1803,7 +1835,23 @@
    "sevens": 5
   },
   {
-   "rank": 96,
+   "rank": 98,
+   "name": "Danish Samnani",
+   "team": "VISION BUILDERS",
+   "runsScored": 184,
+   "outs": 10,
+   "netRuns": 142,
+   "runsAgainst": 66,
+   "wickets": 10,
+   "ngv": 76,
+   "games": 6,
+   "avgNgv": 12.67,
+   "fours": 7,
+   "fives": 2,
+   "sevens": 11
+  },
+  {
+   "rank": 99,
    "name": "Blake Di Gregorio",
    "team": "TITANS",
    "runsScored": 361,
@@ -1819,7 +1867,7 @@
    "sevens": 4
   },
   {
-   "rank": 97,
+   "rank": 100,
    "name": "Yianni Hasakis",
    "team": "LAKERS",
    "runsScored": 301,
@@ -1833,54 +1881,6 @@
    "fours": 7,
    "fives": 5,
    "sevens": 5
-  },
-  {
-   "rank": 98,
-   "name": "Manish Nathwani",
-   "team": "ROCKET RANDOMS",
-   "runsScored": 153,
-   "outs": 6,
-   "netRuns": 129,
-   "runsAgainst": 66,
-   "wickets": 12,
-   "ngv": 63,
-   "games": 5,
-   "avgNgv": 12.6,
-   "fours": 7,
-   "fives": 1,
-   "sevens": 5
-  },
-  {
-   "rank": 99,
-   "name": "Thomas",
-   "team": "RIB TICKLERS",
-   "runsScored": 45,
-   "outs": 2,
-   "netRuns": 39,
-   "runsAgainst": 14,
-   "wickets": 6,
-   "ngv": 25,
-   "games": 2,
-   "avgNgv": 12.5,
-   "fours": 0,
-   "fives": 0,
-   "sevens": 1
-  },
-  {
-   "rank": 100,
-   "name": "Danish Samnani",
-   "team": "VISION BUILDERS",
-   "runsScored": 206,
-   "outs": 10,
-   "netRuns": 164,
-   "runsAgainst": 77,
-   "wickets": 12,
-   "ngv": 87,
-   "games": 7,
-   "avgNgv": 12.43,
-   "fours": 7,
-   "fives": 3,
-   "sevens": 11
   },
   {
    "rank": 157,
@@ -1915,7 +1915,7 @@
    "sevens": 0
   },
   {
-   "rank": 299,
+   "rank": 300,
    "name": "Liam Roche",
    "team": "BOWLIN ASHHH",
    "runsScored": 125,
@@ -1947,7 +1947,7 @@
    "sevens": 7
   },
   {
-   "rank": 537,
+   "rank": 536,
    "name": "Alex Desaram",
    "team": "BOWLIN ASHHH",
    "runsScored": 129,
@@ -1963,7 +1963,7 @@
    "sevens": 3
   },
   {
-   "rank": 1106,
+   "rank": 1102,
    "name": "Joshua Sykes",
    "team": "BOWLIN ASHHH",
    "runsScored": 47,
@@ -1979,7 +1979,7 @@
    "sevens": 0
   }
  ],
- "gradeCount": 1126,
+ "gradeCount": 1121,
  "gradeInfo": "Showing grade data from 28/05/2026 to 24/11/2026.",
  "games": [
   {
@@ -2071,5 +2071,5 @@
  "errors": {
   "reports": "Datascore game list never appeared"
  },
- "updatedAt": "2026-11-24T10:01:45+00:00"
+ "updatedAt": "2026-11-24T10:55:41+00:00"
 }
