@@ -492,6 +492,22 @@
   },
   {
    "rank": 14,
+   "name": "Sanjay Rathnakumar",
+   "team": "SLOGGERS 8.0",
+   "runsScored": 76,
+   "outs": 4,
+   "netRuns": 61,
+   "runsAgainst": 16,
+   "wickets": 4,
+   "ngv": 45,
+   "games": 2,
+   "avgNgv": 22.5,
+   "fours": 2,
+   "fives": 0,
+   "sevens": 5
+  },
+  {
+   "rank": 15,
    "name": "Paul Chin",
    "team": "DREAMERS",
    "runsScored": 556,
@@ -507,7 +523,7 @@
    "sevens": 17
   },
   {
-   "rank": 15,
+   "rank": 16,
    "name": "Rocky Singh",
    "team": "EASTERN EAGLES",
    "runsScored": 57,
@@ -523,7 +539,7 @@
    "sevens": 4
   },
   {
-   "rank": 16,
+   "rank": 17,
    "name": "Ayaz Virani",
    "team": "VCP PHONES",
    "runsScored": 114,
@@ -539,7 +555,7 @@
    "sevens": 4
   },
   {
-   "rank": 17,
+   "rank": 18,
    "name": "Mohsin Ameer",
    "team": "NENE CHICKEN - MIPL",
    "runsScored": 107,
@@ -555,7 +571,7 @@
    "sevens": 6
   },
   {
-   "rank": 18,
+   "rank": 19,
    "name": "Almohin Dhamani",
    "team": "AKS METALS",
    "runsScored": 95,
@@ -569,22 +585,6 @@
    "fours": 4,
    "fives": 0,
    "sevens": 4
-  },
-  {
-   "rank": 19,
-   "name": "Sanjay Rathnakumar",
-   "team": "SLOGGERS 8.0",
-   "runsScored": 113,
-   "outs": 4,
-   "netRuns": 98,
-   "runsAgainst": 34,
-   "wickets": 6,
-   "ngv": 64,
-   "games": 3,
-   "avgNgv": 21.33,
-   "fours": 3,
-   "fives": 1,
-   "sevens": 7
   },
   {
    "rank": 20,
@@ -1292,22 +1292,6 @@
   },
   {
    "rank": 64,
-   "name": "Gokul Subramaniam",
-   "team": "SLOGGERS 8.0",
-   "runsScored": 80,
-   "outs": 3,
-   "netRuns": 68,
-   "runsAgainst": 22,
-   "wickets": 6,
-   "ngv": 46,
-   "games": 3,
-   "avgNgv": 15.33,
-   "fours": 2,
-   "fives": 2,
-   "sevens": 3
-  },
-  {
-   "rank": 65,
    "name": "Imran Mamani",
    "team": "FALCON INSTITUTE",
    "runsScored": 106,
@@ -1323,7 +1307,7 @@
    "sevens": 3
   },
   {
-   "rank": 66,
+   "rank": 65,
    "name": "Samrat Handa",
    "team": "PITCH INVADERS",
    "runsScored": 430,
@@ -1339,7 +1323,7 @@
    "sevens": 22
   },
   {
-   "rank": 67,
+   "rank": 66,
    "name": "Darpan Arora",
    "team": "NIGHTMARES",
    "runsScored": 97,
@@ -1355,7 +1339,7 @@
    "sevens": 4
   },
   {
-   "rank": 68,
+   "rank": 67,
    "name": "Samrat Handa",
    "team": "NH4",
    "runsScored": 151,
@@ -1371,7 +1355,7 @@
    "sevens": 2
   },
   {
-   "rank": 69,
+   "rank": 68,
    "name": "Anil Jan Muhammad",
    "team": "NENE CHICKEN",
    "runsScored": 102,
@@ -1387,7 +1371,7 @@
    "sevens": 3
   },
   {
-   "rank": 70,
+   "rank": 69,
    "name": "Asif Dhanani",
    "team": "VCP PHONES",
    "runsScored": 139,
@@ -1403,7 +1387,7 @@
    "sevens": 13
   },
   {
-   "rank": 71,
+   "rank": 70,
    "name": "Rishi Talwar",
    "team": "WHY DID YOU REDEEM IT",
    "runsScored": 127,
@@ -1419,7 +1403,7 @@
    "sevens": 7
   },
   {
-   "rank": 72,
+   "rank": 71,
    "name": "Adam Rixon",
    "team": "GOAT CC",
    "runsScored": 159,
@@ -1435,7 +1419,7 @@
    "sevens": 6
   },
   {
-   "rank": 73,
+   "rank": 72,
    "name": "Dheer Mehta",
    "team": "BATTING BARONS",
    "runsScored": 322,
@@ -1451,7 +1435,7 @@
    "sevens": 7
   },
   {
-   "rank": 74,
+   "rank": 73,
    "name": "Luke 02/04/1995",
    "team": "BUTTER CHICKEN BANDITS",
    "runsScored": 305,
@@ -1467,7 +1451,7 @@
    "sevens": 6
   },
   {
-   "rank": 75,
+   "rank": 74,
    "name": "Abdul C",
    "team": "PACKAGE",
    "runsScored": 119,
@@ -1483,7 +1467,7 @@
    "sevens": 5
   },
   {
-   "rank": 76,
+   "rank": 75,
    "name": "Armaan R",
    "team": "NH4",
    "runsScored": 146,
@@ -1499,7 +1483,7 @@
    "sevens": 8
   },
   {
-   "rank": 77,
+   "rank": 76,
    "name": "Adnan Karim",
    "team": "MONEY QUEST",
    "runsScored": 91,
@@ -1515,7 +1499,7 @@
    "sevens": 1
   },
   {
-   "rank": 78,
+   "rank": 77,
    "name": "Aryab Khuwaja",
    "team": "VISION CONSULTANTS - MIPL",
    "runsScored": 91,
@@ -1531,7 +1515,7 @@
    "sevens": 3
   },
   {
-   "rank": 79,
+   "rank": 78,
    "name": "Adnan Karim",
    "team": "NENE CHICKEN",
    "runsScored": 322,
@@ -1547,7 +1531,7 @@
    "sevens": 12
   },
   {
-   "rank": 80,
+   "rank": 79,
    "name": "Sherwin Lobo",
    "team": "DHURANDHAR XI",
    "runsScored": 291,
@@ -1563,7 +1547,7 @@
    "sevens": 8
   },
   {
-   "rank": 81,
+   "rank": 80,
    "name": "Varun K",
    "team": "NIGHTMARES",
    "runsScored": 478,
@@ -1577,6 +1561,22 @@
    "fours": 10,
    "fives": 6,
    "sevens": 30
+  },
+  {
+   "rank": 81,
+   "name": "Gokul Subramaniam",
+   "team": "SLOGGERS 8.0",
+   "runsScored": 47,
+   "outs": 2,
+   "netRuns": 38,
+   "runsAgainst": 10,
+   "wickets": 5,
+   "ngv": 28,
+   "games": 2,
+   "avgNgv": 14,
+   "fours": 1,
+   "fives": 0,
+   "sevens": 2
   },
   {
    "rank": 82,
@@ -1883,7 +1883,7 @@
    "sevens": 11
   },
   {
-   "rank": 156,
+   "rank": 157,
    "name": "James Roche",
    "team": "BOWLIN ASHHH",
    "runsScored": 35,
@@ -1947,7 +1947,7 @@
    "sevens": 7
   },
   {
-   "rank": 540,
+   "rank": 539,
    "name": "Alex Desaram",
    "team": "BOWLIN ASHHH",
    "runsScored": 129,
@@ -2071,5 +2071,5 @@
  "errors": {
   "reports": "Datascore game list never appeared"
  },
- "updatedAt": "2026-11-24T08:02:17+00:00"
+ "updatedAt": "2026-11-24T09:00:06+00:00"
 }
