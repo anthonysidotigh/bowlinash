@@ -215,11 +215,11 @@ def parse_game(label):
             "date": f"{y}-{mo}-{d}", "time": f"{hh}:{mm}", "opponent": opp.title()}
 
 
-def open_game_list(page, query="against"):
-    """Open the 'Select Game...' list by typing into it. The box is a search field:
-    clicking it again after the first time doesn't reopen the list, but typing does.
-    Every game label contains "against", so that query lists them all; pass a date
-    like "18/11/2026 09:16" to narrow it to one game."""
+def open_game_list(page):
+    """Open the 'Select Game...' list. The box filters the list by whatever text is in it,
+    and typing anything (even part of a game's name) matches nothing. Once a game is
+    picked its name sits in the box, so the list comes up empty. Clearing the box brings
+    back the full list."""
     inp = page.locator("input.mud-select-input").first
     items = page.locator(".mud-popover-open .mud-list-item")
     for attempt in range(5):
@@ -227,7 +227,6 @@ def open_game_list(page, query="against"):
             inp.click()
             inp.press("Control+a")
             inp.press("Backspace")
-            inp.type(query, delay=90)
             items.first.wait_for(state="visible", timeout=12000)
             return items
         except Exception:
@@ -235,7 +234,7 @@ def open_game_list(page, query="against"):
             page.keyboard.press("Escape")
             page.mouse.click(5, 5)
             page.wait_for_timeout(2500)
-    raise RuntimeError(f"Datascore game list never appeared (query '{query}')")
+    raise RuntimeError("Datascore game list never appeared")
 
 
 def goto_team_reports(page):
@@ -309,8 +308,7 @@ def scrape_reports(page, previous_games):
         if not missing:
             continue  # finished games don't change, so only download each PDF once
 
-        when = g["label"].split(" against ")[0]  # "18/11/2026 09:16"
-        items = open_game_list(page, when)
+        items = open_game_list(page)
         items.filter(has_text=g["label"]).first.click()
         page.wait_for_function(
             "v => document.querySelector('input.mud-select-input').value.trim() === v",

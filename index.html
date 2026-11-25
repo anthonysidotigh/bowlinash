@@ -191,6 +191,9 @@ const $ = id => document.getElementById(id);
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const fmt = (n, dp = 1) => typeof n === 'number' ? (Number.isInteger(n) ? n : n.toFixed(dp)) : esc(n);
 const sign = n => typeof n === 'number' ? (n < 0 ? 'neg' : n > 0 ? 'pos' : '') : '';
+// Players on our team listed without both a first and last name (e.g. "Rair", "Harrison")
+// are fill-ins: they're left out of Our Players and our highlighted grade rows.
+const isFillIn = name => String(name || '').trim().split(/\s+/).filter(w => /[a-z]/i.test(w)).length < 2;
 const same = (a, b) => String(a).trim().toUpperCase() === String(b).trim().toUpperCase();
 const ord = n => n + (['th','st','nd','rd'][(n % 100 - 20) % 10] || ['th','st','nd','rd'][n % 100] || 'th');
 
@@ -270,7 +273,7 @@ function render() {
   // ---- players (team) with their rank across the whole grade
   $('teamInfo').textContent = d.teamInfo || '';
   const gradeRank = p => (d.gradeTop || []).find(g => p.playerId && g.playerId ? g.playerId === p.playerId : same(g.name, p.name) && same(g.team, p.team))?.rank;
-  const players = (d.teamPlayers || []).slice().sort((a, b) => b.avgNgv - a.avgNgv);
+  const players = (d.teamPlayers || []).filter(p => !isFillIn(p.name)).sort((a, b) => (b.avgNgv ?? -1e9) - (a.avgNgv ?? -1e9));
   $('playersTbl').innerHTML = players.length ? `<table class="tbl"><thead><tr>
     <th class="l">Player</th><th>Gms</th><th>Net runs</th><th class="hide-sm">Outs</th><th>Wkts</th>
     <th class="hide-sm">Runs agst</th><th class="hide-sm">NGV</th><th>Avg NGV</th><th>Grade rank</th></tr></thead><tbody>
@@ -295,11 +298,12 @@ function render() {
 
   // ---- grade leaders
   $('gradeInfo').textContent = d.gradeInfo || '';
-  const top = (d.gradeTop || []).filter(p => p.rank <= gradeLimit || same(p.team, team));
+  const ours = p => same(p.team, team) && !isFillIn(p.name);
+  const top = (d.gradeTop || []).filter(p => (p.rank <= gradeLimit && !(same(p.team, team) && isFillIn(p.name))) || ours(p));
   $('gradeTbl').innerHTML = top.length ? `<table class="tbl"><thead><tr>
     <th class="l">#</th><th class="l">Player</th><th class="l hide-sm">Team</th><th class="hide-sm">Gms</th><th>Runs</th><th>Wkts</th><th>Avg NGV</th></tr></thead><tbody>
     ${top.map((p, i) => `${i && p.rank - top[i - 1].rank > 1 ? '<tr><td colspan="7" class="l" style="color:var(--muted);text-align:center">⋯</td></tr>' : ''}
-      <tr class="${same(p.team, team) ? 'us' : ''}"><td class="l num">${p.rank}</td>
+      <tr class="${ours(p) ? 'us' : ''}"><td class="l num">${p.rank}</td>
       <td class="l strong">${esc(p.name)}</td><td class="l hide-sm">${esc(p.team)}</td><td class="hide-sm">${p.games}</td>
       <td>${p.netRuns}</td><td>${p.wickets}</td><td class="strong ${sign(p.avgNgv)}">${fmt(p.avgNgv)}</td></tr>`).join('')}
     </tbody></table>` : '<div class="empty">No grade stats yet.</div>';
