@@ -4219,7 +4219,7 @@
    "avgNgv": 24
   },
   {
-   "rank": 454,
+   "rank": 456,
    "playerId": 566060,
    "name": "Anthony Sidoti",
    "team": "BOWLIN ASHHH",
@@ -4255,7 +4255,7 @@
    "avgNgv": 11
   },
   {
-   "rank": 509,
+   "rank": 511,
    "playerId": 566717,
    "name": "James Roche",
    "team": "BOWLIN ASHHH",
@@ -4291,7 +4291,7 @@
    "avgNgv": 10
   },
   {
-   "rank": 806,
+   "rank": 808,
    "playerId": 566720,
    "name": "John Korasidis",
    "team": "BOWLIN ASHHH",
@@ -4327,7 +4327,7 @@
    "avgNgv": 5.67
   },
   {
-   "rank": 810,
+   "rank": 812,
    "playerId": 566718,
    "name": "Liam Roche",
    "team": "BOWLIN ASHHH",
@@ -4363,7 +4363,7 @@
    "avgNgv": 5.6
   },
   {
-   "rank": 886,
+   "rank": 888,
    "playerId": 569095,
    "name": "Steven Boscacci",
    "team": "BOWLIN ASHHH",
@@ -4399,7 +4399,7 @@
    "avgNgv": 4.4
   },
   {
-   "rank": 1011,
+   "rank": 1012,
    "playerId": 604832,
    "name": "Rair",
    "team": "BOWLIN ASHHH",
@@ -4435,7 +4435,7 @@
    "avgNgv": 3
   },
   {
-   "rank": 1012,
+   "rank": 1013,
    "playerId": 604945,
    "name": "Rair",
    "team": "BOWLIN ASHHH",
@@ -4471,7 +4471,7 @@
    "avgNgv": 3
   },
   {
-   "rank": 1242,
+   "rank": 1244,
    "playerId": 566719,
    "name": "Alex Desaram",
    "team": "BOWLIN ASHHH",
@@ -4507,7 +4507,7 @@
    "avgNgv": 0.4
   },
   {
-   "rank": 1643,
+   "rank": 1645,
    "playerId": 605572,
    "name": "Anthony",
    "team": "BOWLIN ASHHH",
@@ -4543,7 +4543,7 @@
    "avgNgv": -4
   },
   {
-   "rank": 1798,
+   "rank": 1801,
    "playerId": 605573,
    "name": "Harrison",
    "team": "BOWLIN ASHHH",
@@ -4579,7 +4579,7 @@
    "avgNgv": -6
   },
   {
-   "rank": 2426,
+   "rank": 2430,
    "playerId": 604946,
    "name": "Joshua Sykes",
    "team": "BOWLIN ASHHH",
@@ -4615,7 +4615,7 @@
    "avgNgv": -19.5
   },
   {
-   "rank": 2611,
+   "rank": 2615,
    "playerId": 605098,
    "name": "Arnav",
    "team": "BOWLIN ASHHH",
@@ -4651,7 +4651,7 @@
    "avgNgv": -34
   }
  ],
- "gradeCount": 2659,
+ "gradeCount": 2663,
  "gradeInfo": "Showing grade data from 29/05/2026 to 25/11/2026.",
  "games": [
   {
@@ -4741,7 +4741,7 @@
   "datascore": "https://reports.datascore.com.au/IndoorCricket/TeamReports/17768"
  },
  "errors": {
-  "reports": "Datascore game list never appeared (query 'against') | home route: Datascore game list never appeared (query 'against') | url=https://reports.datascore.com.au/IndoorCricket/TeamReports/17768 text=Action Indoor Sports Box Hill |  | Team Reports For Team BOWLIN ASHHH in grade Action 6+. |  | SHOW PLAYER STATS FOR GRADE | SHOW PLAYER STATS FOR JUST TEAM | Select Game... |  | Captains Report |  | Score Sheet Report |  | Team Report |  | Player Report |  | Combined Player and Team Report |  | Combined Team and Score Sheet Report |  | Player Ranking Report |  | Copyright \u00a9 2010-2026 Datascore - Privacy | Datascore Web Reports, Version 3.1.1.1"
+  "reports": "Datascore game list never appeared"
  },
- "updatedAt": "2026-11-25T11:25:28+00:00"
+ "updatedAt": "2026-11-25T11:33:05+00:00"
 }
