@@ -588,22 +588,6 @@
   },
   {
    "rank": 20,
-   "name": "Josh Jennings-Sykes",
-   "team": "BELGRAVE HUNTERS",
-   "runsScored": 53,
-   "outs": 1,
-   "netRuns": 50,
-   "runsAgainst": 8,
-   "wickets": 7,
-   "ngv": 42,
-   "games": 2,
-   "avgNgv": 21,
-   "fours": 1,
-   "fives": 0,
-   "sevens": 1
-  },
-  {
-   "rank": 21,
    "name": "Nathan Powyer",
    "team": "BURNLEY STARS",
    "runsScored": 48,
@@ -619,7 +603,7 @@
    "sevens": 2
   },
   {
-   "rank": 22,
+   "rank": 21,
    "name": "Ayan Mamani",
    "team": "MONEY QUEST",
    "runsScored": 73,
@@ -635,7 +619,7 @@
    "sevens": 2
   },
   {
-   "rank": 23,
+   "rank": 22,
    "name": "Abdul Haseeb",
    "team": "MONEYQUEST",
    "runsScored": 463,
@@ -651,7 +635,7 @@
    "sevens": 14
   },
   {
-   "rank": 24,
+   "rank": 23,
    "name": "Samrat Handa",
    "team": "PACKAGE",
    "runsScored": 282,
@@ -667,7 +651,7 @@
    "sevens": 16
   },
   {
-   "rank": 25,
+   "rank": 24,
    "name": "Alykhan Mithani",
    "team": "MORTGAGE DOMAYNE - MIPL",
    "runsScored": 96,
@@ -683,7 +667,7 @@
    "sevens": 6
   },
   {
-   "rank": 26,
+   "rank": 25,
    "name": "Elliot Choi",
    "team": "SANDPAPER SUPREMACY",
    "runsScored": 97,
@@ -699,7 +683,7 @@
    "sevens": 2
   },
   {
-   "rank": 27,
+   "rank": 26,
    "name": "Ayush K",
    "team": "FIVE AND A HALF MEN",
    "runsScored": 68,
@@ -715,7 +699,7 @@
    "sevens": 1
   },
   {
-   "rank": 28,
+   "rank": 27,
    "name": "Asif Makhani",
    "team": "OZ CONSULTANCY",
    "runsScored": 63,
@@ -731,7 +715,7 @@
    "sevens": 1
   },
   {
-   "rank": 29,
+   "rank": 28,
    "name": "Irfan Hayat",
    "team": "MONEYQUEST",
    "runsScored": 50,
@@ -747,7 +731,7 @@
    "sevens": 2
   },
   {
-   "rank": 30,
+   "rank": 29,
    "name": "Nadeesha Kumar",
    "team": "BOX HILL SPINNERS",
    "runsScored": 162,
@@ -763,7 +747,7 @@
    "sevens": 6
   },
   {
-   "rank": 31,
+   "rank": 30,
    "name": "Supratick Choudhury",
    "team": "HIT SQUAD",
    "runsScored": 54,
@@ -779,7 +763,7 @@
    "sevens": 1
   },
   {
-   "rank": 32,
+   "rank": 31,
    "name": "Varun K",
    "team": "EASTERN EAGLES",
    "runsScored": 592,
@@ -795,7 +779,7 @@
    "sevens": 37
   },
   {
-   "rank": 33,
+   "rank": 32,
    "name": "Aidan Morton",
    "team": "ASHWOOD CRICKET CLUB",
    "runsScored": 339,
@@ -811,7 +795,7 @@
    "sevens": 11
   },
   {
-   "rank": 34,
+   "rank": 33,
    "name": "Steve Obrien",
    "team": "M.A.P.S. BOUNCERS",
    "runsScored": 381,
@@ -827,7 +811,7 @@
    "sevens": 12
   },
   {
-   "rank": 35,
+   "rank": 34,
    "name": "Rohit S",
    "team": "POWERHOUSE",
    "runsScored": 256,
@@ -843,7 +827,7 @@
    "sevens": 12
   },
   {
-   "rank": 36,
+   "rank": 35,
    "name": "Almohin Dhamani",
    "team": "VISION BUILDERS",
    "runsScored": 452,
@@ -859,7 +843,7 @@
    "sevens": 16
   },
   {
-   "rank": 37,
+   "rank": 36,
    "name": "Rushab D",
    "team": "EASTERN RAPTORS",
    "runsScored": 90,
@@ -875,7 +859,7 @@
    "sevens": 3
   },
   {
-   "rank": 38,
+   "rank": 37,
    "name": "Kishan Panchal",
    "team": "SNAIL MAIL",
    "runsScored": 382,
@@ -891,7 +875,7 @@
    "sevens": 14
   },
   {
-   "rank": 39,
+   "rank": 38,
    "name": "Ashwin Amin",
    "team": "PACKAGE",
    "runsScored": 79,
@@ -907,7 +891,7 @@
    "sevens": 4
   },
   {
-   "rank": 40,
+   "rank": 39,
    "name": "Xavier Buxton",
    "team": "D.C.M",
    "runsScored": 408,
@@ -923,7 +907,7 @@
    "sevens": 12
   },
   {
-   "rank": 41,
+   "rank": 40,
    "name": "Ansh Lalani",
    "team": "OZ CONSULTANCY",
    "runsScored": 62,
@@ -939,7 +923,7 @@
    "sevens": 4
   },
   {
-   "rank": 42,
+   "rank": 41,
    "name": "Chintan Patel",
    "team": "SURTI",
    "runsScored": 401,
@@ -955,7 +939,7 @@
    "sevens": 22
   },
   {
-   "rank": 43,
+   "rank": 42,
    "name": "Cooper Box",
    "team": "DALES",
    "runsScored": 288,
@@ -971,7 +955,7 @@
    "sevens": 10
   },
   {
-   "rank": 44,
+   "rank": 43,
    "name": "Darcy Trewern",
    "team": "TEAM KYLE",
    "runsScored": 137,
@@ -987,7 +971,7 @@
    "sevens": 4
   },
   {
-   "rank": 45,
+   "rank": 44,
    "name": "Gary Hitchman",
    "team": "CUTTERS",
    "runsScored": 462,
@@ -1003,7 +987,7 @@
    "sevens": 15
   },
   {
-   "rank": 46,
+   "rank": 45,
    "name": "Rocky Singh",
    "team": "NH4",
    "runsScored": 493,
@@ -1019,7 +1003,7 @@
    "sevens": 25
   },
   {
-   "rank": 47,
+   "rank": 46,
    "name": "Saif Ali",
    "team": "MR GRAIN",
    "runsScored": 118,
@@ -1035,7 +1019,7 @@
    "sevens": 6
   },
   {
-   "rank": 48,
+   "rank": 47,
    "name": "Rak Shetty",
    "team": "NH4",
    "runsScored": 204,
@@ -1051,7 +1035,7 @@
    "sevens": 9
   },
   {
-   "rank": 49,
+   "rank": 48,
    "name": "Jude Bell",
    "team": "D.C.M",
    "runsScored": 454,
@@ -1067,7 +1051,7 @@
    "sevens": 18
   },
   {
-   "rank": 50,
+   "rank": 49,
    "name": "Dhiral Merchant",
    "team": "NH4",
    "runsScored": 287,
@@ -1083,7 +1067,7 @@
    "sevens": 19
   },
   {
-   "rank": 51,
+   "rank": 50,
    "name": "Faisal Hussainy",
    "team": "EAA",
    "runsScored": 238,
@@ -1099,7 +1083,7 @@
    "sevens": 12
   },
   {
-   "rank": 52,
+   "rank": 51,
    "name": "Scott Newman",
    "team": "KOOKABURRAS",
    "runsScored": 514,
@@ -1115,7 +1099,7 @@
    "sevens": 24
   },
   {
-   "rank": 53,
+   "rank": 52,
    "name": "Fahad Ahmed",
    "team": "L.B.W.",
    "runsScored": 81,
@@ -1131,7 +1115,7 @@
    "sevens": 3
   },
   {
-   "rank": 54,
+   "rank": 53,
    "name": "Glen S",
    "team": "X FORCE",
    "runsScored": 73,
@@ -1147,7 +1131,7 @@
    "sevens": 1
   },
   {
-   "rank": 55,
+   "rank": 54,
    "name": "Alnawaz Mamani",
    "team": "ALLIED COLLISION",
    "runsScored": 47,
@@ -1163,7 +1147,7 @@
    "sevens": 0
   },
   {
-   "rank": 56,
+   "rank": 55,
    "name": "Armaan Singh",
    "team": "NH4",
    "runsScored": 396,
@@ -1179,7 +1163,7 @@
    "sevens": 22
   },
   {
-   "rank": 57,
+   "rank": 56,
    "name": "Aneel Khuwaja",
    "team": "OEVS - MIPL",
    "runsScored": 118,
@@ -1195,7 +1179,7 @@
    "sevens": 4
   },
   {
-   "rank": 58,
+   "rank": 57,
    "name": "Nakul Rao",
    "team": "MASTER BATTERS",
    "runsScored": 253,
@@ -1211,7 +1195,7 @@
    "sevens": 12
   },
   {
-   "rank": 59,
+   "rank": 58,
    "name": "Oliver Niven",
    "team": "VULTURES",
    "runsScored": 212,
@@ -1227,7 +1211,7 @@
    "sevens": 0
   },
   {
-   "rank": 60,
+   "rank": 59,
    "name": "Nick Dinnison",
    "team": "MASTER BATTERS",
    "runsScored": 39,
@@ -1243,7 +1227,7 @@
    "sevens": 0
   },
   {
-   "rank": 61,
+   "rank": 60,
    "name": "Pramod Perera",
    "team": "PACERS",
    "runsScored": 37,
@@ -1259,7 +1243,7 @@
    "sevens": 1
   },
   {
-   "rank": 62,
+   "rank": 61,
    "name": "Benjamin Joseph",
    "team": "NO CASH HERE",
    "runsScored": 67,
@@ -1275,7 +1259,7 @@
    "sevens": 3
   },
   {
-   "rank": 63,
+   "rank": 62,
    "name": "Scott Newman",
    "team": "MASTER BATTERS",
    "runsScored": 338,
@@ -1291,7 +1275,7 @@
    "sevens": 13
   },
   {
-   "rank": 64,
+   "rank": 63,
    "name": "Imran Mamani",
    "team": "FALCON INSTITUTE",
    "runsScored": 106,
@@ -1307,7 +1291,7 @@
    "sevens": 3
   },
   {
-   "rank": 65,
+   "rank": 64,
    "name": "Samrat Handa",
    "team": "PITCH INVADERS",
    "runsScored": 430,
@@ -1323,7 +1307,7 @@
    "sevens": 22
   },
   {
-   "rank": 66,
+   "rank": 65,
    "name": "Darpan Arora",
    "team": "NIGHTMARES",
    "runsScored": 97,
@@ -1339,7 +1323,7 @@
    "sevens": 4
   },
   {
-   "rank": 67,
+   "rank": 66,
    "name": "Samrat Handa",
    "team": "NH4",
    "runsScored": 151,
@@ -1355,7 +1339,7 @@
    "sevens": 2
   },
   {
-   "rank": 68,
+   "rank": 67,
    "name": "Anil Jan Muhammad",
    "team": "NENE CHICKEN",
    "runsScored": 102,
@@ -1371,7 +1355,7 @@
    "sevens": 3
   },
   {
-   "rank": 69,
+   "rank": 68,
    "name": "Asif Dhanani",
    "team": "VCP PHONES",
    "runsScored": 139,
@@ -1387,7 +1371,7 @@
    "sevens": 13
   },
   {
-   "rank": 70,
+   "rank": 69,
    "name": "Rishi Talwar",
    "team": "WHY DID YOU REDEEM IT",
    "runsScored": 127,
@@ -1403,7 +1387,7 @@
    "sevens": 7
   },
   {
-   "rank": 71,
+   "rank": 70,
    "name": "Adam Rixon",
    "team": "GOAT CC",
    "runsScored": 159,
@@ -1419,7 +1403,7 @@
    "sevens": 6
   },
   {
-   "rank": 72,
+   "rank": 71,
    "name": "Dheer Mehta",
    "team": "BATTING BARONS",
    "runsScored": 322,
@@ -1435,7 +1419,7 @@
    "sevens": 7
   },
   {
-   "rank": 73,
+   "rank": 72,
    "name": "Luke 02/04/1995",
    "team": "BUTTER CHICKEN BANDITS",
    "runsScored": 305,
@@ -1451,7 +1435,7 @@
    "sevens": 6
   },
   {
-   "rank": 74,
+   "rank": 73,
    "name": "Abdul C",
    "team": "PACKAGE",
    "runsScored": 119,
@@ -1467,7 +1451,7 @@
    "sevens": 5
   },
   {
-   "rank": 75,
+   "rank": 74,
    "name": "Armaan R",
    "team": "NH4",
    "runsScored": 146,
@@ -1483,7 +1467,7 @@
    "sevens": 8
   },
   {
-   "rank": 76,
+   "rank": 75,
    "name": "Adnan Karim",
    "team": "MONEY QUEST",
    "runsScored": 91,
@@ -1499,7 +1483,7 @@
    "sevens": 1
   },
   {
-   "rank": 77,
+   "rank": 76,
    "name": "Aryab Khuwaja",
    "team": "VISION CONSULTANTS - MIPL",
    "runsScored": 91,
@@ -1515,7 +1499,7 @@
    "sevens": 3
   },
   {
-   "rank": 78,
+   "rank": 77,
    "name": "Adnan Karim",
    "team": "NENE CHICKEN",
    "runsScored": 322,
@@ -1531,7 +1515,7 @@
    "sevens": 12
   },
   {
-   "rank": 79,
+   "rank": 78,
    "name": "Sherwin Lobo",
    "team": "DHURANDHAR XI",
    "runsScored": 291,
@@ -1547,7 +1531,7 @@
    "sevens": 8
   },
   {
-   "rank": 80,
+   "rank": 79,
    "name": "Varun K",
    "team": "NIGHTMARES",
    "runsScored": 478,
@@ -1563,7 +1547,7 @@
    "sevens": 30
   },
   {
-   "rank": 81,
+   "rank": 80,
    "name": "Gokul Subramaniam",
    "team": "SLOGGERS 8.0",
    "runsScored": 47,
@@ -1579,7 +1563,7 @@
    "sevens": 2
   },
   {
-   "rank": 82,
+   "rank": 81,
    "name": "Vasan Ratnalingam",
    "team": "FIRE MMA",
    "runsScored": 47,
@@ -1595,7 +1579,7 @@
    "sevens": 0
   },
   {
-   "rank": 83,
+   "rank": 82,
    "name": "Zach Schloeffel",
    "team": "MASTER BATTERS",
    "runsScored": 401,
@@ -1611,7 +1595,7 @@
    "sevens": 16
   },
   {
-   "rank": 84,
+   "rank": 83,
    "name": "Jack Eu",
    "team": "BOX ON",
    "runsScored": 247,
@@ -1627,7 +1611,7 @@
    "sevens": 12
   },
   {
-   "rank": 85,
+   "rank": 84,
    "name": "Oscar Norquay",
    "team": "GOAT CC",
    "runsScored": 123,
@@ -1643,7 +1627,7 @@
    "sevens": 1
   },
   {
-   "rank": 86,
+   "rank": 85,
    "name": "Abdul 0",
    "team": "EASTERN EAGLES",
    "runsScored": 372,
@@ -1659,7 +1643,7 @@
    "sevens": 18
   },
   {
-   "rank": 87,
+   "rank": 86,
    "name": "Ayaz Virani",
    "team": "ALLIED COLLISION",
    "runsScored": 117,
@@ -1675,7 +1659,7 @@
    "sevens": 6
   },
   {
-   "rank": 88,
+   "rank": 87,
    "name": "Richard Moulding",
    "team": "LADS",
    "runsScored": 260,
@@ -1691,7 +1675,7 @@
    "sevens": 6
   },
   {
-   "rank": 89,
+   "rank": 88,
    "name": "Shamil 07/09/1994",
    "team": "FIRE MMA",
    "runsScored": 142,
@@ -1707,7 +1691,7 @@
    "sevens": 5
   },
   {
-   "rank": 90,
+   "rank": 89,
    "name": "Ninad Ninad",
    "team": "VISION BUILDERS",
    "runsScored": 94,
@@ -1723,7 +1707,7 @@
    "sevens": 4
   },
   {
-   "rank": 91,
+   "rank": 90,
    "name": "Anand Lalani",
    "team": "FALCON INSTITUTE - MIPL",
    "runsScored": 71,
@@ -1737,6 +1721,22 @@
    "fours": 0,
    "fives": 0,
    "sevens": 2
+  },
+  {
+   "rank": 91,
+   "name": "Blake Di Gregorio",
+   "team": "TITANS",
+   "runsScored": 343,
+   "outs": 16,
+   "netRuns": 295,
+   "runsAgainst": 109,
+   "wickets": 21,
+   "ngv": 186,
+   "games": 14,
+   "avgNgv": 13.29,
+   "fours": 9,
+   "fives": 5,
+   "sevens": 4
   },
   {
    "rank": 92,
@@ -1852,22 +1852,6 @@
   },
   {
    "rank": 99,
-   "name": "Blake Di Gregorio",
-   "team": "TITANS",
-   "runsScored": 361,
-   "outs": 19,
-   "netRuns": 304,
-   "runsAgainst": 114,
-   "wickets": 23,
-   "ngv": 190,
-   "games": 15,
-   "avgNgv": 12.67,
-   "fours": 9,
-   "fives": 5,
-   "sevens": 4
-  },
-  {
-   "rank": 100,
    "name": "Yianni Hasakis",
    "team": "LAKERS",
    "runsScored": 301,
@@ -1883,7 +1867,23 @@
    "sevens": 5
   },
   {
-   "rank": 157,
+   "rank": 100,
+   "name": "Manish Nathwani",
+   "team": "ROCKET RANDOMS",
+   "runsScored": 153,
+   "outs": 6,
+   "netRuns": 129,
+   "runsAgainst": 66,
+   "wickets": 12,
+   "ngv": 63,
+   "games": 5,
+   "avgNgv": 12.6,
+   "fours": 7,
+   "fives": 1,
+   "sevens": 5
+  },
+  {
+   "rank": 156,
    "name": "James Roche",
    "team": "BOWLIN ASHHH",
    "runsScored": 35,
@@ -1899,7 +1899,7 @@
    "sevens": 0
   },
   {
-   "rank": 296,
+   "rank": 294,
    "name": "John Korasidis",
    "team": "BOWLIN ASHHH",
    "runsScored": 68,
@@ -1915,7 +1915,7 @@
    "sevens": 0
   },
   {
-   "rank": 300,
+   "rank": 298,
    "name": "Liam Roche",
    "team": "BOWLIN ASHHH",
    "runsScored": 125,
@@ -1947,7 +1947,7 @@
    "sevens": 7
   },
   {
-   "rank": 536,
+   "rank": 532,
    "name": "Alex Desaram",
    "team": "BOWLIN ASHHH",
    "runsScored": 129,
@@ -1963,7 +1963,7 @@
    "sevens": 3
   },
   {
-   "rank": 1102,
+   "rank": 1101,
    "name": "Joshua Sykes",
    "team": "BOWLIN ASHHH",
    "runsScored": 47,
@@ -1979,7 +1979,7 @@
    "sevens": 0
   }
  ],
- "gradeCount": 1121,
+ "gradeCount": 1120,
  "gradeInfo": "Showing grade data from 29/05/2026 to 25/11/2026.",
  "games": [
   {
@@ -2071,5 +2071,5 @@
  "errors": {
   "reports": "Datascore game list never appeared"
  },
- "updatedAt": "2026-11-24T14:04:27+00:00"
+ "updatedAt": "2026-11-25T06:36:55+00:00"
 }
