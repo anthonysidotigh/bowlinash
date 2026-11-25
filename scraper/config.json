@@ -9,7 +9,9 @@
   },
   "datascore": {
     "base": "https://reports.datascore.com.au",
+    "stadiumId": 13,
     "teamId": 17768,
+    "teamSearch": "Bowlin",
     "gradeTopN": 100,
     "maxGamesWithReports": 10,
     "reports": [

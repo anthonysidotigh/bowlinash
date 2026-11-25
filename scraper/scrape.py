@@ -133,24 +133,54 @@ def scrape_sportskeep(page):
 
 # ---------------------------------------------------------------- Datascore stats
 
+def show_one_game_players(page):
+    """The rankings page hides anyone who has played only one game by default
+    (the "Don't show players who have only played one game" box starts ticked).
+    Untick it so everyone is included, then wait for the table to re-render."""
+    cb = page.locator("label.mud-checkbox", has_text="only played one game")
+    if not cb.count():
+        return
+    box = cb.locator("input[type=checkbox]")
+    for _ in range(3):
+        if not box.is_checked():
+            return
+        before = page.evaluate("document.querySelectorAll('table tr').length")
+        cb.click()
+        try:
+            page.wait_for_function(
+                f"document.querySelectorAll('table tr').length !== {before}", timeout=20000)
+        except Exception:
+            pass  # row count may not change if nobody was hidden
+        page.wait_for_timeout(1500)
+    if box.is_checked():
+        raise RuntimeError("could not untick 'only played one game' filter")
+
+
 def ds_rankings(page, filter_type):
     c = CFG["datascore"]
     page.goto(f"{c['base']}/IndoorCricket/PlayerRankings/{c['teamId']}?filterType={filter_type}")
     page.wait_for_function("document.querySelectorAll('table tr').length > 2", timeout=60000)
-    page.wait_for_timeout(1000)  # let Blazor finish rendering rows
+    page.wait_for_timeout(1500)  # let Blazor finish rendering rows
+    show_one_game_players(page)
     t = page.evaluate(DS_TABLE_JS)
     players = []
     for row in t["rows"]:
         d = dict(zip(t["keys"], row))
+        g = lambda k: num(d.get(k))
         players.append({
-            "rank": num(d.get("Rank")), "name": d.get("Player Name", "").title(),
-            "team": d.get("Team Name", ""),
-            "runsScored": num(d.get("Scoring Runs:Total")), "outs": num(d.get("Going Out:Total")),
-            "netRuns": num(d.get("Total Runs")), "runsAgainst": num(d.get("Runs Against")),
-            "wickets": num(d.get("Wickets Taken")), "ngv": num(d.get("Total Net Game Value")),
-            "games": num(d.get("Num Games")), "avgNgv": num(d.get("Average Net Game Value")),
-            "fours": num(d.get("Scoring Runs:4")), "fives": num(d.get("Scoring Runs:5")),
-            "sevens": num(d.get("Scoring Runs:7")),
+            "rank": g("Rank"), "playerId": g("Player Id"),
+            "name": d.get("Player Name", "").title(), "team": d.get("Team Name", ""),
+            "games": g("Num Games"),
+            # batting: how each run total was scored
+            "scoring": {k: g(f"Scoring Runs:{k}") for k in
+                        ["0", "1", "2", "3", "4", "5", "7", "Sun", "Other", "Total"]},
+            # how they got out: Bowled, Caught, Run out, Stumped, LBW, Mankad
+            "dismissals": {k: g(f"Going Out:{k}") for k in
+                           ["B", "C", "RO", "S", "L", "M", "Other", "Total"]},
+            "runsScored": g("Scoring Runs:Total"), "outs": g("Going Out:Total"),
+            "netRuns": g("Total Runs"), "runsAgainst": g("Runs Against"),
+            "wickets": g("Wickets Taken"), "ngv": g("Total Net Game Value"),
+            "avgNgv": g("Average Net Game Value"),
         })
     return players, t["info"]
 
@@ -202,14 +232,66 @@ def open_game_list(page):
     raise RuntimeError("Datascore game list never appeared")
 
 
-def scrape_reports(page, previous_games):
+def goto_team_reports(page):
+    """Reach the Team Reports page the way a person does: stadium page -> search for the
+    team -> pick it -> TEAM REPORTS. Jumping straight to the TeamReports URL in a fresh
+    browser loads the page but not its game list, because the site remembers the chosen
+    team from the home page."""
     c = CFG["datascore"]
-    page.goto(f"{c['base']}/IndoorCricket/TeamReports/{c['teamId']}")
+    page.goto(f"{c['base']}/?stid={c['stadiumId']}")
+    inputs = page.locator("input.mud-select-input")
+    inputs.nth(1).wait_for(state="visible", timeout=60000)
+    page.wait_for_timeout(2500)  # let Blazor connect before typing
+
+    team = inputs.nth(1)
+    option = page.locator(".mud-popover-open .mud-list-item", has_text=CFG["teamName"])
+    for attempt in range(4):
+        team.click()
+        team.fill("")
+        team.type(c.get("teamSearch", CFG["teamName"]), delay=120)
+        try:
+            option.first.wait_for(state="visible", timeout=15000)
+            break
+        except Exception:
+            print(f"  team search not ready (attempt {attempt + 1}), retrying")
+            page.keyboard.press("Escape")
+            page.wait_for_timeout(3000)
+    else:
+        raise RuntimeError(f"team '{CFG['teamName']}' never appeared in the Datascore team search")
+    option.first.click()
+
+    page.wait_for_function(
+        "[...document.querySelectorAll('button')].some(b => /team reports/i.test(b.innerText) && !b.disabled)",
+        timeout=30000)
+    page.get_by_role("button", name=re.compile(r"team reports", re.I)).click()
+    page.wait_for_url("**/TeamReports/**", timeout=60000)
     page.wait_for_selector("text=Team Reports For Team", timeout=60000)
-    page.wait_for_selector("input.mud-select-input", timeout=60000)
     page.wait_for_timeout(4000)  # let Blazor finish loading the game list
 
-    labels = [s.strip() for s in open_game_list(page).all_inner_texts()]
+
+def page_snapshot(page):
+    """Short description of what the scraper is looking at, saved into data.json on failure."""
+    try:
+        text = page.evaluate("document.body.innerText").replace("\n", " | ")
+        return f"url={page.url} text={text[:600]}"
+    except Exception as e:
+        return f"(snapshot failed: {e})"
+
+
+def scrape_reports(page, previous_games):
+    c = CFG["datascore"]
+    try:
+        goto_team_reports(page)
+        labels = [s.strip() for s in open_game_list(page).all_inner_texts()]
+    except Exception as first_error:
+        print(f"  home-page route failed ({first_error}); trying the direct URL")
+        page.goto(f"{c['base']}/IndoorCricket/TeamReports/{c['teamId']}")
+        page.wait_for_selector("text=Team Reports For Team", timeout=60000)
+        page.wait_for_timeout(5000)
+        try:
+            labels = [s.strip() for s in open_game_list(page).all_inner_texts()]
+        except Exception as e:
+            raise RuntimeError(f"{str(e).splitlines()[0]} | home route: {str(first_error).splitlines()[0]} | {page_snapshot(page)}")
     page.keyboard.press("Escape")
     games = [g for g in (parse_game(l) for l in labels) if g][: c["maxGamesWithReports"]]
 
@@ -275,7 +357,7 @@ def main():
                 fn()
             except Exception as e:
                 traceback.print_exc()
-                errors[name] = str(e).splitlines()[0][:300]
+                errors[name] = str(e).splitlines()[0][:1500]
                 # Screenshot of what the scraper saw; the workflow uploads it as an artifact.
                 try:
                     DEBUG_DIR.mkdir(parents=True, exist_ok=True)
