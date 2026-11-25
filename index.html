@@ -106,10 +106,18 @@
   details.game summary::-webkit-details-marker{display:none}
   details.game summary::after{content:'+';font:900 24px/1 var(--cond);color:var(--orange)}
   details.game[open] summary::after{content:'–'}
-  .pdfs{display:flex;flex-wrap:wrap;gap:8px;padding:0 16px 16px}
-  .pdfs a{text-decoration:none;font:italic 700 15px/1 var(--cond);text-transform:uppercase;padding:10px 14px;background:var(--panel2);
-    border:1px solid var(--line);color:var(--text);transform:skewX(-8deg)}
-  .pdfs a:hover,.pdfs a:focus-visible{background:var(--orange);border-color:var(--orange);color:var(--ink);outline:none}
+  /* report cards: page-1 preview + label; click opens the PDF */
+  .pdfs{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px;padding:0 16px 16px}
+  .rep{display:flex;flex-direction:column;text-decoration:none;color:var(--text);background:var(--panel2);border:1px solid var(--line);
+    border-radius:4px;overflow:hidden;transition:border-color .15s,transform .15s}
+  .rep .thumb{display:block;aspect-ratio:4/3;background:#fff;overflow:hidden}
+  .rep .thumb img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
+  .rep .thumb i{display:grid;place-items:center;height:100%;color:#999;font:italic 800 22px var(--cond)}
+  .rep .lbl{font:italic 700 15px/1.1 var(--cond);text-transform:uppercase;padding:9px 10px}
+  .rep:hover,.rep:focus-visible{border-color:var(--orange);transform:translateY(-2px);outline:none}
+  .rep:hover .lbl,.rep:focus-visible .lbl{background:var(--orange);color:var(--ink)}
+  @media (prefers-reduced-motion:reduce){.rep{transition:none}.rep:hover{transform:none}}
+  @media (max-width:760px){.pdfs{grid-template-columns:repeat(2,minmax(0,1fr))}}
   .note{color:var(--muted);font-size:13px;padding:0 16px 16px}
   .key{color:var(--muted);font-size:12px;margin:8px 2px 0}
 
@@ -320,7 +328,10 @@ function render() {
     return `<details class="game" ${i === 0 ? 'open' : ''}><summary><div class="main">
         <b>vs ${esc(g.opponent)}</b><span style="display:block;color:var(--muted);font-size:12px">
         ${dt.toLocaleDateString('en-AU', {weekday:'short', day:'numeric', month:'short', year:'numeric'})} · ${esc(g.time)}</span></div></summary>
-      ${reps.length ? `<div class="pdfs">${reps.map(([k, p]) => `<a href="${esc(fileUrl(p))}" target="_blank" rel="noopener">${esc(names[k] || k)} ↗</a>`).join('')}</div>`
+      ${reps.length ? `<div class="pdfs">${reps.map(([k, p]) => { const th = g.thumbs?.[k];
+          return `<a class="rep" href="${esc(fileUrl(p))}" target="_blank" rel="noopener">
+            <span class="thumb">${th ? `<img src="${esc(fileUrl(th))}" alt="" loading="lazy">` : '<i>PDF</i>'}</span>
+            <span class="lbl">${esc(names[k] || k)} ↗</span></a>`; }).join('')}</div>`
         : `<div class="note">PDFs will appear here after the scraper's next run. In the meantime they're on <a href="${esc(d.sources?.datascore || '#')}" target="_blank" rel="noopener">Datascore</a>.</div>`}
     </details>`;
   }).join('') || '<div class="empty">No games yet.</div>';

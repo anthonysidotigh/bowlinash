@@ -334,6 +334,40 @@ def scrape_reports(page, previous_games):
     return games
 
 
+# ---------------------------------------------------------------- report previews
+
+THUMB_WIDTH = 480
+
+
+def make_thumbnails(games):
+    """Render page 1 of every saved PDF to a small .webp preview next to it, once.
+    Adds g["thumbs"][slug] = path for the page to show."""
+    import pypdfium2 as pdfium  # imported here so a missing package only skips previews
+
+    made = 0
+    for g in games:
+        g["thumbs"] = dict(g.get("thumbs", {}))
+        for key, pdf_path in g.get("reports", {}).items():
+            src = ROOT / pdf_path
+            dst = src.with_suffix(".webp")
+            if not dst.exists():
+                if not src.exists():
+                    continue
+                try:
+                    pdf = pdfium.PdfDocument(str(src))
+                    page = pdf[0]
+                    scale = THUMB_WIDTH / page.get_width()
+                    page.render(scale=scale).to_pil().convert("RGB").save(dst, "WEBP", quality=72, method=6)
+                    pdf.close()
+                    made += 1
+                except Exception as e:
+                    print(f"  ! preview for {pdf_path}: {e}", file=sys.stderr)
+                    continue
+            g["thumbs"][key] = str(dst.relative_to(ROOT))
+    print(f"  made {made} new previews")
+    return games
+
+
 # ---------------------------------------------------------------- main
 
 def main():
@@ -356,6 +390,7 @@ def main():
             ("sportskeep", lambda: new.update(scrape_sportskeep(page))),
             ("stats", lambda: new.update(scrape_datascore_stats(page))),
             ("reports", lambda: new.update(games=scrape_reports(page, old.get("games", [])))),
+            ("previews", lambda: new.update(games=make_thumbnails(new.get("games", [])))),
         ]
         for name, fn in steps:
             try:
