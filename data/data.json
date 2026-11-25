@@ -1883,7 +1883,7 @@
    "sevens": 5
   },
   {
-   "rank": 156,
+   "rank": 155,
    "name": "James Roche",
    "team": "BOWLIN ASHHH",
    "runsScored": 35,
@@ -1963,7 +1963,7 @@
    "sevens": 3
   },
   {
-   "rank": 1101,
+   "rank": 1102,
    "name": "Joshua Sykes",
    "team": "BOWLIN ASHHH",
    "runsScored": 47,
@@ -1979,7 +1979,7 @@
    "sevens": 0
   }
  ],
- "gradeCount": 1120,
+ "gradeCount": 1121,
  "gradeInfo": "Showing grade data from 29/05/2026 to 25/11/2026.",
  "games": [
   {
@@ -2071,5 +2071,5 @@
  "errors": {
   "reports": "Datascore game list never appeared"
  },
- "updatedAt": "2026-11-25T08:02:48+00:00"
+ "updatedAt": "2026-11-25T10:13:03+00:00"
 }
