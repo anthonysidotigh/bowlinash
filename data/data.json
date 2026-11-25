@@ -3,37 +3,37 @@
  "ladder": [
   {
    "pos": 1,
-   "team": "Cutters",
-   "teamId": 531,
-   "p": 3,
-   "w": 2,
+   "team": "Sloggers 8.0",
+   "teamId": 13222,
+   "p": 4,
+   "w": 3,
    "l": 1,
    "d": 0,
    "b": 0,
    "ff": 0,
    "fa": 0,
-   "for": 326,
-   "against": 250,
-   "pct": 130.4,
-   "bonus": 7,
-   "pts": 15
+   "for": 301,
+   "against": 182,
+   "pct": 165.38,
+   "bonus": 9,
+   "pts": 21
   },
   {
    "pos": 2,
-   "team": "Sloggers 8.0",
-   "teamId": 13222,
-   "p": 3,
+   "team": "Cutters",
+   "teamId": 531,
+   "p": 4,
    "w": 2,
-   "l": 1,
+   "l": 2,
    "d": 0,
    "b": 0,
    "ff": 0,
    "fa": 0,
-   "for": 181,
-   "against": 115,
-   "pct": 157.39,
-   "bonus": 6,
-   "pts": 14
+   "for": 393,
+   "against": 370,
+   "pct": 106.22,
+   "bonus": 7,
+   "pts": 15
   },
   {
    "pos": 3,
@@ -71,23 +71,40 @@
   },
   {
    "pos": 5,
-   "team": "Glenferrie Meats",
-   "teamId": 13886,
-   "p": 3,
+   "team": "Snail Mail",
+   "teamId": 13524,
+   "p": 4,
    "w": 1,
-   "l": 2,
+   "l": 3,
    "d": 0,
    "b": 0,
    "ff": 0,
    "fa": 0,
-   "for": 242,
-   "against": 366,
-   "pct": 66.12,
+   "for": 395,
+   "against": 452,
+   "pct": 87.39,
+   "bonus": 5,
+   "pts": 9
+  },
+  {
+   "pos": 6,
+   "team": "Glenferrie Meats",
+   "teamId": 13886,
+   "p": 4,
+   "w": 1,
+   "l": 3,
+   "d": 0,
+   "b": 0,
+   "ff": 0,
+   "fa": 0,
+   "for": 282,
+   "against": 495,
+   "pct": 56.97,
    "bonus": 3,
    "pts": 7
   },
   {
-   "pos": 6,
+   "pos": 7,
    "team": "Bowlin Ashhh",
    "teamId": 13293,
    "p": 3,
@@ -104,7 +121,7 @@
    "pts": 6
   },
   {
-   "pos": 7,
+   "pos": 8,
    "team": "Adipoli",
    "teamId": 13460,
    "p": 3,
@@ -119,23 +136,6 @@
    "pct": 82.78,
    "bonus": 4,
    "pts": 4
-  },
-  {
-   "pos": 8,
-   "team": "Snail Mail",
-   "teamId": 13524,
-   "p": 3,
-   "w": 0,
-   "l": 3,
-   "d": 0,
-   "b": 0,
-   "ff": 0,
-   "fa": 0,
-   "for": 266,
-   "against": 412,
-   "pct": 64.56,
-   "bonus": 2,
-   "pts": 2
   }
  ],
  "fixture": [
@@ -616,7 +616,7 @@
    "avgNgv": -34
   }
  ],
- "teamInfo": "Showing team data from 29/05/2026 to 25/11/2026.",
+ "teamInfo": "Showing team data from 30/05/2026 to 26/11/2026.",
  "gradeTop": [
   {
    "rank": 1,
@@ -4652,7 +4652,7 @@
   }
  ],
  "gradeCount": 2663,
- "gradeInfo": "Showing grade data from 29/05/2026 to 25/11/2026.",
+ "gradeInfo": "Showing grade data from 30/05/2026 to 26/11/2026.",
  "games": [
   {
    "key": "2026-11-18_0916_sloggers-8-0",
@@ -4910,5 +4910,5 @@
   "ladder": "https://results.sportskeepglobal.com/vic--box-hill-indoor-sports-centre/stadium-ladder.php?sp=41&g=4111&s=7912&embedded=",
   "datascore": "https://reports.datascore.com.au/IndoorCricket/TeamReports/17768"
  },
- "updatedAt": "2026-11-25T11:40:50+00:00"
+ "updatedAt": "2026-11-25T13:12:32+00:00"
 }
