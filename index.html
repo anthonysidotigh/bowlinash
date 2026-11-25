@@ -33,9 +33,7 @@
   .streak.s1{width:520px;right:-120px;top:120px}
   .streak.s2{width:380px;left:-160px;bottom:30px;opacity:.35}
   .head{position:relative;display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:28px;align-items:center}
-  .brand img{display:block;width:100%;height:auto;
-    -webkit-mask-image:radial-gradient(ellipse 50% 50% at 50% 50%,#000 70%,transparent 100%);
-            mask-image:radial-gradient(ellipse 50% 50% at 50% 50%,#000 70%,transparent 100%)}
+  .brand img{display:block;width:100%;height:auto}
   .eyebrow{font:italic 800 14px/1 var(--cond);letter-spacing:.06em;text-transform:uppercase;color:var(--orange)}
   .status{display:flex;gap:8px;align-items:center;font-size:12px;color:var(--muted);margin-top:6px}
   .dot{width:8px;height:8px;border-radius:50%;background:var(--orange);box-shadow:0 0 0 0 rgba(236,106,12,.6);animation:pulse 2s infinite;flex:none}
@@ -118,7 +116,7 @@
   .btn{font:italic 800 15px/1 var(--cond);text-transform:uppercase;background:none;color:var(--orange-hi);border:1px solid var(--orange-deep);
     padding:10px 16px;cursor:pointer;margin-top:12px;transform:skewX(-8deg)}
   .btn:hover,.btn:focus-visible{background:var(--orange);color:var(--ink);outline:none}
-  .err{background:#3a1414;border:1px solid #7a2020;color:#ffc2c2;border-radius:6px;padding:10px 14px;font-size:13px;margin-top:12px;overflow-wrap:anywhere}
+  .err{color:var(--muted);font-size:12px;margin-top:6px;padding-left:16px;position:relative;overflow-wrap:anywhere}.err::before{content:'';position:absolute;left:1px;top:5px;width:8px;height:8px;border-radius:50%;background:#777}
   footer{margin:44px 0 0;padding:22px 0 40px;border-top:3px solid var(--orange);color:var(--muted);font-size:12px}
   footer .tag{display:block;font:italic 900 20px/1.2 var(--cond);text-transform:uppercase;color:#fff;margin-bottom:6px}
   .empty{padding:16px;color:var(--muted)}
@@ -139,7 +137,7 @@
 <header>
   <div class="streak s1"></div><div class="streak s2"></div>
   <div class="wrap head">
-    <div class="brand"><img src="images/logo.jpg" alt="Bowlin Ashhh team logo" width="680" height="600"><h1 id="team" class="sr">Bowlin Ashhh</h1></div>
+    <div class="brand"><img src="images/logo.webp" alt="Bowlin Ashhh team logo" width="700" height="629"><h1 id="team" class="sr">Bowlin Ashhh</h1></div>
     <div>
       <div class="eyebrow" id="comp">Indoor cricket · Box Hill</div>
       <div class="status"><i class="dot" id="dot"></i><span id="updated">Loading…</span></div>
@@ -225,8 +223,9 @@ function render() {
   $('comp').textContent = (d.competition || 'Indoor cricket') + ' · Box Hill';
   $('ladderComp').textContent = d.competition || '';
   $('updated').textContent = d.updatedAt ? 'Data last changed ' + ago(d.updatedAt) + ' · checks every ~5 min' : '';
-  $('errors').innerHTML = d.errors ? Object.entries(d.errors).map(([k, v]) =>
-    `<div class="err">Couldn't refresh <b>${esc(k)}</b> on the last run, so this part shows the previous data. (${esc(v)})</div>`).join('') : '';
+  const errNames = {sportskeep: 'ladder & results', stats: 'player stats', reports: 'game reports'};
+  $('errors').innerHTML = d.errors ? `<div class="err" title="${esc(Object.entries(d.errors).map(([k, v]) => k + ': ' + v).join('\n'))}">
+    Couldn't refresh ${Object.keys(d.errors).map(k => esc(errNames[k] || k)).join(', ')} on the last check. Showing the latest saved copy.</div>` : '';
 
   // ---- hero
   const us = (d.ladder || []).find(r => same(r.team, team));

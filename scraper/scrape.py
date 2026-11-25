@@ -216,17 +216,18 @@ def parse_game(label):
 
 
 def open_game_list(page):
-    """Open the 'Select Game...' list. The box filters the list by whatever text is in it,
-    and typing anything (even part of a game's name) matches nothing. Once a game is
-    picked its name sits in the box, so the list comes up empty. Clearing the box brings
-    back the full list."""
+    """Open the 'Select Game...' list. The box filters the list by its text, and any text
+    at all (even part of a game's name) matches nothing. Clicking only opens the list the
+    first time. What reliably brings back the full list is changing the box's text to
+    empty: replace it with one character, then delete that character."""
     inp = page.locator("input.mud-select-input").first
     items = page.locator(".mud-popover-open .mud-list-item")
     for attempt in range(5):
         try:
             inp.click()
             inp.press("Control+a")
-            inp.press("Backspace")
+            inp.type("1", delay=80)      # replace whatever is there...
+            inp.press("Backspace")       # ...then empty it: this is what makes the list show
             items.first.wait_for(state="visible", timeout=12000)
             return items
         except Exception:
