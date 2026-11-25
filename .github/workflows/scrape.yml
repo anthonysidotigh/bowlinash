@@ -30,6 +30,14 @@ jobs:
       # Uses the Google Chrome that's preinstalled on the runner, so no browser download.
       - run: python scraper/scrape.py
 
+      # If a section failed, keep a screenshot of what the scraper saw (Actions run page -> Artifacts).
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: debug-screenshots
+          path: /tmp/scrape-debug/
+          if-no-files-found: ignore
+
       - name: Commit changes (only if something changed)
         run: |
           git config user.name "github-actions[bot]"

@@ -9,6 +9,7 @@ doesn't make a commit every 5 minutes for nothing.
 
 import base64
 import json
+import math
 import re
 import sys
 import traceback
@@ -69,9 +70,11 @@ def num(v):
     v = (v or "").strip().rstrip(".")
     try:
         f = float(v)
-        return int(f) if f.is_integer() else round(f, 2)
     except ValueError:
         return v
+    if not math.isfinite(f):  # Datascore shows an infinite average for 0-game players
+        return None
+    return int(f) if f.is_integer() else round(f, 2)
 
 
 def param(href, name):
@@ -182,6 +185,9 @@ def ds_rankings(page, filter_type):
             "wickets": g("Wickets Taken"), "ngv": g("Total Net Game Value"),
             "avgNgv": g("Average Net Game Value"),
         })
+    players = [p for p in players if isinstance(p["games"], int) and p["games"] > 0]
+    for i, p in enumerate(players, 1):
+        p["rank"] = i
     return players, t["info"]
 
 
@@ -209,27 +215,27 @@ def parse_game(label):
             "date": f"{y}-{mo}-{d}", "time": f"{hh}:{mm}", "opponent": opp.title()}
 
 
-def open_game_list(page):
-    """Open the 'Select Game...' dropdown. The game list loads over a slow connection
-    (GitHub runs in the US, Datascore is in Australia), so clicking too early opens an
-    empty list. Close and retry until the games show up."""
+def open_game_list(page, query="against"):
+    """Open the 'Select Game...' list by typing into it. The box is a search field:
+    clicking it again after the first time doesn't reopen the list, but typing does.
+    Every game label contains "against", so that query lists them all; pass a date
+    like "18/11/2026 09:16" to narrow it to one game."""
     inp = page.locator("input.mud-select-input").first
     items = page.locator(".mud-popover-open .mud-list-item")
-    for attempt in range(6):
-        if attempt % 2 == 0:
-            inp.click()
-        else:
-            inp.focus()
-            page.keyboard.press("ArrowDown")
+    for attempt in range(5):
         try:
-            items.first.wait_for(state="visible", timeout=10000)
+            inp.click()
+            inp.press("Control+a")
+            inp.press("Backspace")
+            inp.type(query, delay=90)
+            items.first.wait_for(state="visible", timeout=12000)
             return items
         except Exception:
             print(f"  game list not ready (attempt {attempt + 1}), retrying")
             page.keyboard.press("Escape")
             page.mouse.click(5, 5)
-            page.wait_for_timeout(3000)
-    raise RuntimeError("Datascore game list never appeared")
+            page.wait_for_timeout(2500)
+    raise RuntimeError(f"Datascore game list never appeared (query '{query}')")
 
 
 def goto_team_reports(page):
@@ -303,7 +309,8 @@ def scrape_reports(page, previous_games):
         if not missing:
             continue  # finished games don't change, so only download each PDF once
 
-        items = open_game_list(page)
+        when = g["label"].split(" against ")[0]  # "18/11/2026 09:16"
+        items = open_game_list(page, when)
         items.filter(has_text=g["label"]).first.click()
         page.wait_for_function(
             "v => document.querySelector('input.mud-select-input').value.trim() === v",
@@ -380,7 +387,7 @@ def main():
         return
     new["updatedAt"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
     DATA_FILE.parent.mkdir(exist_ok=True)
-    DATA_FILE.write_text(json.dumps(new, indent=1))
+    DATA_FILE.write_text(json.dumps(new, indent=1, allow_nan=False))
     print("data.json updated.")
 
 
