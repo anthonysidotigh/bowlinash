@@ -1,0 +1,20 @@
+{
+ "name": "Bowlin Ashhh \u00b7 Indoor Cricket",
+ "short_name": "Bowlin Ashhh",
+ "start_url": "./",
+ "display": "standalone",
+ "background_color": "#141414",
+ "theme_color": "#141414",
+ "icons": [
+  {
+   "src": "images/icon-192.png",
+   "sizes": "192x192",
+   "type": "image/png"
+  },
+  {
+   "src": "images/icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png"
+  }
+ ]
+}
