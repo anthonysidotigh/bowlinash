@@ -2,7 +2,11 @@ name: Scrape results
 
 on:
   schedule:
-    - cron: "*/5 * * * *"   # every 5 min (GitHub's minimum; runs can start late when GitHub is busy)
+    # GitHub treats these as "best effort": in practice the 5-minute schedule runs about once an hour.
+    - cron: "*/5 * * * *"
+    # Match evenings: extra runs every 10 min, 7pm-midnight Melbourne time (08:00-12:59 UTC in
+    # daylight saving; 6pm-11pm in winter), when new results and reports land on Datascore.
+    - cron: "3,13,23,33,43,53 8-12 * * *"
   workflow_dispatch:         # lets you run it by hand from the Actions tab
 
 permissions:

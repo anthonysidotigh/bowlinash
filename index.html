@@ -240,8 +240,11 @@ const REFRESH_MS = 5 * 60 * 1000;
 // waiting for the host (Cloudflare) to redeploy. Falls back to the copy deployed with the site.
 const REPO = 'anthonysidotigh/bowlinash', BRANCH = 'main';
 const DATA_URLS = [`https://raw.githubusercontent.com/${REPO}/${BRANCH}/data/data.json`, 'data/data.json'];
-// PDFs are served from jsDelivr's GitHub mirror (opens them in the browser instead of downloading).
-const fileUrl = p => /^https?:/.test(p) ? p : `https://cdn.jsdelivr.net/gh/${REPO}@${BRANCH}/${p}`;
+// Reports and previews are served from this site itself (Cloudflare redeploys within a couple of
+// minutes of every commit). jsDelivr's GitHub mirror is the backup if a preview isn't there yet;
+// it can lag a branch by hours, so it's only a fallback.
+const fileUrl = p => /^https?:/.test(p) ? p : p;
+const mirrorUrl = p => /^https?:/.test(p) ? p : `https://cdn.jsdelivr.net/gh/${REPO}@${BRANCH}/${p}`;
 let DATA = null, gradeLimit = 10;
 const $ = id => document.getElementById(id);
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -396,7 +399,7 @@ function render() {
         ${dt.toLocaleDateString('en-AU', {weekday:'short', day:'numeric', month:'short', year:'numeric'})} · ${esc(g.time)}</span></div></summary>
       ${reps.length ? `<div class="pdfs">${reps.map(([k, p]) => { const th = g.thumbs?.[k];
           return `<a class="rep" href="${esc(fileUrl(p))}" target="_blank" rel="noopener">
-            <span class="thumb">${th ? `<img src="${esc(fileUrl(th))}" alt="" loading="lazy">` : '<i>PDF</i>'}</span>
+            <span class="thumb">${th ? `<img src="${esc(fileUrl(th))}" data-alt="${esc(mirrorUrl(th))}" alt="" loading="lazy" onerror="if(this.dataset.alt&&this.src!==this.dataset.alt){this.src=this.dataset.alt}else{this.replaceWith(Object.assign(document.createElement('i'),{textContent:'PDF'}))}">` : '<i>PDF</i>'}</span>
             <span class="lbl">${esc(names[k] || k)}&nbsp;↗</span></a>`; }).join('')}</div>`
         : `<div class="note">PDFs will appear here after the scraper's next run. In the meantime they're on <a href="${esc(d.sources?.datascore || '#')}" target="_blank" rel="noopener">Datascore</a>.</div>`}
     </details>`;
