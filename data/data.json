@@ -780,6 +780,22 @@
   },
   {
    "rank": 32,
+   "name": "Xavier Buxton",
+   "team": "D.C.M",
+   "runsScored": 377,
+   "outs": 8,
+   "netRuns": 353,
+   "runsAgainst": 140,
+   "wickets": 16,
+   "ngv": 213,
+   "games": 11,
+   "avgNgv": 19.36,
+   "fours": 15,
+   "fives": 7,
+   "sevens": 12
+  },
+  {
+   "rank": 33,
    "name": "Aidan Morton",
    "team": "ASHWOOD CRICKET CLUB",
    "runsScored": 339,
@@ -795,7 +811,7 @@
    "sevens": 11
   },
   {
-   "rank": 33,
+   "rank": 34,
    "name": "Steve Obrien",
    "team": "M.A.P.S. BOUNCERS",
    "runsScored": 381,
@@ -811,7 +827,7 @@
    "sevens": 12
   },
   {
-   "rank": 34,
+   "rank": 35,
    "name": "Rohit S",
    "team": "POWERHOUSE",
    "runsScored": 256,
@@ -827,7 +843,7 @@
    "sevens": 12
   },
   {
-   "rank": 35,
+   "rank": 36,
    "name": "Almohin Dhamani",
    "team": "VISION BUILDERS",
    "runsScored": 452,
@@ -843,7 +859,7 @@
    "sevens": 16
   },
   {
-   "rank": 36,
+   "rank": 37,
    "name": "Rushab D",
    "team": "EASTERN RAPTORS",
    "runsScored": 90,
@@ -859,7 +875,7 @@
    "sevens": 3
   },
   {
-   "rank": 37,
+   "rank": 38,
    "name": "Kishan Panchal",
    "team": "SNAIL MAIL",
    "runsScored": 382,
@@ -875,7 +891,7 @@
    "sevens": 14
   },
   {
-   "rank": 38,
+   "rank": 39,
    "name": "Ashwin Amin",
    "team": "PACKAGE",
    "runsScored": 79,
@@ -889,22 +905,6 @@
    "fours": 3,
    "fives": 1,
    "sevens": 4
-  },
-  {
-   "rank": 39,
-   "name": "Xavier Buxton",
-   "team": "D.C.M",
-   "runsScored": 408,
-   "outs": 8,
-   "netRuns": 384,
-   "runsAgainst": 163,
-   "wickets": 17,
-   "ngv": 221,
-   "games": 12,
-   "avgNgv": 18.42,
-   "fours": 16,
-   "fives": 10,
-   "sevens": 12
   },
   {
    "rank": 40,
@@ -1036,22 +1036,6 @@
   },
   {
    "rank": 48,
-   "name": "Jude Bell",
-   "team": "D.C.M",
-   "runsScored": 454,
-   "outs": 14,
-   "netRuns": 409,
-   "runsAgainst": 164,
-   "wickets": 23,
-   "ngv": 245,
-   "games": 15,
-   "avgNgv": 16.33,
-   "fours": 9,
-   "fives": 7,
-   "sevens": 18
-  },
-  {
-   "rank": 49,
    "name": "Dhiral Merchant",
    "team": "NH4",
    "runsScored": 287,
@@ -1067,7 +1051,7 @@
    "sevens": 19
   },
   {
-   "rank": 50,
+   "rank": 49,
    "name": "Faisal Hussainy",
    "team": "EAA",
    "runsScored": 238,
@@ -1083,7 +1067,7 @@
    "sevens": 12
   },
   {
-   "rank": 51,
+   "rank": 50,
    "name": "Scott Newman",
    "team": "KOOKABURRAS",
    "runsScored": 514,
@@ -1099,7 +1083,7 @@
    "sevens": 24
   },
   {
-   "rank": 52,
+   "rank": 51,
    "name": "Fahad Ahmed",
    "team": "L.B.W.",
    "runsScored": 81,
@@ -1115,7 +1099,7 @@
    "sevens": 3
   },
   {
-   "rank": 53,
+   "rank": 52,
    "name": "Glen S",
    "team": "X FORCE",
    "runsScored": 73,
@@ -1129,6 +1113,22 @@
    "fours": 3,
    "fives": 1,
    "sevens": 1
+  },
+  {
+   "rank": 53,
+   "name": "Jude Bell",
+   "team": "D.C.M",
+   "runsScored": 425,
+   "outs": 14,
+   "netRuns": 380,
+   "runsAgainst": 156,
+   "wickets": 21,
+   "ngv": 224,
+   "games": 14,
+   "avgNgv": 16,
+   "fours": 7,
+   "fives": 6,
+   "sevens": 17
   },
   {
    "rank": 54,
@@ -1228,6 +1228,22 @@
   },
   {
    "rank": 60,
+   "name": "Dheer Mehta",
+   "team": "BATTING BARONS",
+   "runsScored": 289,
+   "outs": 7,
+   "netRuns": 268,
+   "runsAgainst": 113,
+   "wickets": 9,
+   "ngv": 155,
+   "games": 10,
+   "avgNgv": 15.5,
+   "fours": 11,
+   "fives": 8,
+   "sevens": 6
+  },
+  {
+   "rank": 61,
    "name": "Pramod Perera",
    "team": "PACERS",
    "runsScored": 37,
@@ -1243,7 +1259,7 @@
    "sevens": 1
   },
   {
-   "rank": 61,
+   "rank": 62,
    "name": "Benjamin Joseph",
    "team": "NO CASH HERE",
    "runsScored": 67,
@@ -1259,7 +1275,7 @@
    "sevens": 3
   },
   {
-   "rank": 62,
+   "rank": 63,
    "name": "Scott Newman",
    "team": "MASTER BATTERS",
    "runsScored": 338,
@@ -1275,7 +1291,7 @@
    "sevens": 13
   },
   {
-   "rank": 63,
+   "rank": 64,
    "name": "Imran Mamani",
    "team": "FALCON INSTITUTE",
    "runsScored": 106,
@@ -1291,7 +1307,7 @@
    "sevens": 3
   },
   {
-   "rank": 64,
+   "rank": 65,
    "name": "Samrat Handa",
    "team": "PITCH INVADERS",
    "runsScored": 430,
@@ -1307,7 +1323,7 @@
    "sevens": 22
   },
   {
-   "rank": 65,
+   "rank": 66,
    "name": "Darpan Arora",
    "team": "NIGHTMARES",
    "runsScored": 97,
@@ -1323,7 +1339,7 @@
    "sevens": 4
   },
   {
-   "rank": 66,
+   "rank": 67,
    "name": "Samrat Handa",
    "team": "NH4",
    "runsScored": 151,
@@ -1339,7 +1355,7 @@
    "sevens": 2
   },
   {
-   "rank": 67,
+   "rank": 68,
    "name": "Anil Jan Muhammad",
    "team": "NENE CHICKEN",
    "runsScored": 102,
@@ -1355,7 +1371,7 @@
    "sevens": 3
   },
   {
-   "rank": 68,
+   "rank": 69,
    "name": "Asif Dhanani",
    "team": "VCP PHONES",
    "runsScored": 139,
@@ -1371,7 +1387,7 @@
    "sevens": 13
   },
   {
-   "rank": 69,
+   "rank": 70,
    "name": "Rishi Talwar",
    "team": "WHY DID YOU REDEEM IT",
    "runsScored": 127,
@@ -1387,7 +1403,7 @@
    "sevens": 7
   },
   {
-   "rank": 70,
+   "rank": 71,
    "name": "Adam Rixon",
    "team": "GOAT CC",
    "runsScored": 159,
@@ -1401,22 +1417,6 @@
    "fours": 5,
    "fives": 1,
    "sevens": 6
-  },
-  {
-   "rank": 71,
-   "name": "Dheer Mehta",
-   "team": "BATTING BARONS",
-   "runsScored": 322,
-   "outs": 9,
-   "netRuns": 295,
-   "runsAgainst": 135,
-   "wickets": 9,
-   "ngv": 160,
-   "games": 11,
-   "avgNgv": 14.55,
-   "fours": 12,
-   "fives": 9,
-   "sevens": 7
   },
   {
    "rank": 72,
@@ -1899,7 +1899,7 @@
    "sevens": 0
   },
   {
-   "rank": 294,
+   "rank": 293,
    "name": "John Korasidis",
    "team": "BOWLIN ASHHH",
    "runsScored": 68,
@@ -1915,7 +1915,7 @@
    "sevens": 0
   },
   {
-   "rank": 298,
+   "rank": 297,
    "name": "Liam Roche",
    "team": "BOWLIN ASHHH",
    "runsScored": 125,
@@ -1931,7 +1931,7 @@
    "sevens": 3
   },
   {
-   "rank": 342,
+   "rank": 341,
    "name": "Steven Boscacci",
    "team": "BOWLIN ASHHH",
    "runsScored": 138,
@@ -2071,5 +2071,5 @@
  "errors": {
   "reports": "Datascore game list never appeared"
  },
- "updatedAt": "2026-11-25T06:36:55+00:00"
+ "updatedAt": "2026-11-25T08:02:48+00:00"
 }
