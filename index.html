@@ -86,6 +86,9 @@
 
   .btn{font:inherit;font-size:13px;font-weight:700;background:none;color:var(--accent);border:1px solid var(--line);border-radius:999px;padding:6px 14px;cursor:pointer;margin-top:10px}
   .err{background:#3a1c1c;border:1px solid #6b2b2b;color:#ffb4b4;border-radius:10px;padding:10px 14px;font-size:13px;margin-top:16px}
+  .key{color:var(--muted);font-size:12px;margin:8px 2px 0}
+  .tbl th.grp{text-align:center;color:var(--text);border-bottom:0;padding-bottom:0}
+  .tbl .sep{border-left:1px solid var(--line)}
   footer{margin:40px 0 0;padding:24px 0 40px;border-top:1px solid var(--line);color:var(--muted);font-size:12px}
   .empty{padding:16px;color:var(--muted)}
 
@@ -124,7 +127,11 @@
     <div><h2>Upcoming</h2><div class="list" id="fixture"></div></div>
   </div></section>
 
-  <section id="players"><h2>Our players <small id="teamInfo"></small></h2><div class="scroll" id="playersTbl"></div></section>
+  <section id="players"><h2>Our players <small id="teamInfo"></small></h2><div class="scroll" id="playersTbl"></div>
+    <h2 style="margin-top:22px">Batting &amp; dismissals <small>How each player's runs were scored and how they got out</small></h2>
+    <div class="scroll" id="breakdownTbl"></div>
+    <p class="key">Sun = runs off the sundries · B bowled · C caught · RO run out · S stumped · L LBW · M mankad</p>
+  </section>
 
   <section id="grade"><h2>Grade leaders <small id="gradeInfo"></small></h2>
     <div class="scroll" id="gradeTbl"></div>
@@ -221,10 +228,10 @@ function render() {
 
   // ---- players (team) with their rank across the whole grade
   $('teamInfo').textContent = d.teamInfo || '';
-  const gradeRank = p => (d.gradeTop || []).find(g => same(g.name, p.name) && same(g.team, p.team))?.rank;
+  const gradeRank = p => (d.gradeTop || []).find(g => p.playerId && g.playerId ? g.playerId === p.playerId : same(g.name, p.name) && same(g.team, p.team))?.rank;
   const players = (d.teamPlayers || []).slice().sort((a, b) => b.avgNgv - a.avgNgv);
   $('playersTbl').innerHTML = players.length ? `<table class="tbl"><thead><tr>
-    <th class="l">Player</th><th>Gms</th><th>Runs</th><th class="hide-sm">Outs</th><th>Wkts</th>
+    <th class="l">Player</th><th>Gms</th><th>Net runs</th><th class="hide-sm">Outs</th><th>Wkts</th>
     <th class="hide-sm">Runs agst</th><th class="hide-sm">NGV</th><th>Avg NGV</th><th>Grade rank</th></tr></thead><tbody>
     ${players.map(p => { const gr = gradeRank(p); return `<tr>
       <td class="l strong">${esc(p.name)}</td><td>${p.games}</td><td>${p.netRuns}</td><td class="hide-sm">${p.outs ?? ''}</td>
@@ -232,6 +239,18 @@ function render() {
       <td class="strong ${sign(p.avgNgv)}">${fmt(p.avgNgv)}</td>
       <td class="num">${gr ? gr + (d.gradeCount ? `<span style="color:var(--muted)">/${d.gradeCount}</span>` : '') : '–'}</td></tr>`; }).join('')}
     </tbody></table>` : '<div class="empty">No player stats yet.</div>';
+
+  // ---- full batting / dismissal breakdown
+  const SC = ['0','1','2','3','4','5','7','Sun','Other','Total'], DM = ['B','C','RO','S','L','M','Other','Total'];
+  const withBd = players.filter(p => p.scoring);
+  $('breakdownTbl').innerHTML = withBd.length ? `<table class="tbl"><thead>
+    <tr><th class="l"></th><th class="grp sep" colspan="${SC.length}">Scoring shots (runs)</th><th class="grp sep" colspan="${DM.length}">Out</th></tr>
+    <tr><th class="l">Player</th>${SC.map((k, i) => `<th class="${i ? '' : 'sep'}">${k === 'Total' ? 'Runs' : k}</th>`).join('')}
+      ${DM.map((k, i) => `<th class="${i ? '' : 'sep'}">${k === 'Total' ? 'Outs' : k}</th>`).join('')}</tr></thead><tbody>
+    ${withBd.map(p => `<tr><td class="l strong">${esc(p.name)}</td>
+      ${SC.map((k, i) => `<td class="${i ? '' : 'sep'} ${k === 'Total' ? 'strong' : ''}">${p.scoring[k] ?? ''}</td>`).join('')}
+      ${DM.map((k, i) => `<td class="${i ? '' : 'sep'} ${k === 'Total' ? 'strong' : ''}">${p.dismissals?.[k] ?? ''}</td>`).join('')}</tr>`).join('')}
+    </tbody></table>` : '<div class="empty">Breakdown appears after the next scraper run.</div>';
 
   // ---- grade leaders
   $('gradeInfo').textContent = d.gradeInfo || '';
