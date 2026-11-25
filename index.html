@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#141414">
 <title>Bowlin Ashhh · Indoor Cricket</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -62,7 +63,34 @@
   nav .wrap{display:flex;gap:6px;overflow-x:auto;padding:10px 16px;scrollbar-width:none}
   nav a{flex:none;text-decoration:none;color:var(--text);font:italic 700 15px/1 var(--cond);text-transform:uppercase;letter-spacing:.03em;
     padding:9px 14px;border:1px solid var(--line);transform:skewX(-8deg)}
-  nav a:hover,nav a:focus-visible{background:var(--orange);border-color:var(--orange);color:var(--ink);outline:none}
+  nav a:hover,nav a:focus-visible,nav a.on{background:var(--orange);border-color:var(--orange);color:var(--ink);outline:none}
+  nav svg{display:none;width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+  nav .short{display:none}
+  .narrow-only{display:none}
+
+  /* player cards (phones) */
+  .pcards{display:grid;gap:10px}
+  .pc{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:12px 14px}
+  .pc-top{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
+  .pc-name{font:italic 800 20px/1.1 var(--cond);text-transform:uppercase}
+  .pc-rank{font-size:12px;color:var(--muted);margin-top:3px}
+  .pc-avg{text-align:right;flex:none}
+  .pc-avg b{display:block;font:italic 900 30px/1 var(--cond)}
+  .pc-avg span{font:italic 700 11px/1 var(--cond);text-transform:uppercase;color:var(--muted);letter-spacing:.05em}
+  .pc-stats{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:4px;margin-top:12px;text-align:center}
+  .pc-stats div{background:var(--panel2);padding:7px 2px;border-radius:4px}
+  .pc-stats b{display:block;font:italic 800 18px/1 var(--cond)}
+  .pc-stats span{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+  .pc details{margin-top:10px;border-top:1px solid var(--line);padding-top:8px}
+  .pc summary{cursor:pointer;list-style:none;font:italic 700 14px/1 var(--cond);text-transform:uppercase;color:var(--orange);padding:6px 0;min-height:32px;display:flex;align-items:center}
+  .pc summary::-webkit-details-marker{display:none}
+  .pc summary::after{content:'+';margin-left:auto;font-size:20px}
+  .pc details[open] summary::after{content:'–'}
+  .chips-l{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin:8px 0 5px}
+  .chips{display:flex;flex-wrap:wrap;gap:5px}
+  .chips span{background:var(--panel2);border-radius:4px;padding:5px 7px;font-size:12px;color:var(--muted);white-space:nowrap}
+  .chips span b{color:var(--text);font-weight:700;margin-left:4px}
+  .chips span.tot{background:rgba(236,106,12,.18);color:var(--orange-hi)}
 
   /* ---------- sections: brush-lettered titles with an orange swipe underneath */
   section{padding:34px 0 6px}
@@ -130,6 +158,21 @@
   .empty{padding:16px;color:var(--muted)}
 
   @media (max-width:760px){
+    /* bottom tab bar instead of the scrolling row of tabs */
+    body{padding-bottom:calc(66px + env(safe-area-inset-bottom))}
+    header{padding-top:calc(18px + env(safe-area-inset-top))}
+    nav{position:fixed;top:auto;bottom:0;left:0;right:0;border-bottom:0;border-top:2px solid var(--orange);
+      padding-bottom:env(safe-area-inset-bottom);background:rgba(17,17,17,.97)}
+    nav .wrap{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0;padding:0;overflow:visible}
+    nav a{transform:none;border:0;padding:8px 2px 7px;display:flex;flex-direction:column;align-items:center;gap:4px;
+      font:italic 700 12px/1 var(--cond);letter-spacing:.02em;color:var(--muted);min-height:56px;justify-content:center}
+    nav a svg{display:block}
+    nav a .full{display:none} nav a .short{display:block}
+    nav a:hover,nav a:focus-visible,nav a.on{background:none;color:var(--orange-hi)}
+    html{scroll-padding-top:12px}
+    .wide-only{display:none}
+    .narrow-only{display:grid}
+    .row .main b{white-space:normal}
     .head{grid-template-columns:1fr;gap:6px}
     .brand{max-width:300px;margin:0 auto}
     .grid2{grid-template-columns:1fr}
@@ -155,9 +198,12 @@
   </div>
 </header>
 
-<nav><div class="wrap">
-  <a href="#ladder">Ladder</a><a href="#games">Results &amp; fixture</a><a href="#players">Our players</a>
-  <a href="#grade">Grade leaders</a><a href="#reports">Game reports</a>
+<nav aria-label="Sections"><div class="wrap">
+  <a href="#ladder" data-sec="ladder"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg><span class="full">Ladder</span><span class="short">Ladder</span></a>
+  <a href="#games" data-sec="games"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg><span class="full">Results &amp; fixture</span><span class="short">Games</span></a>
+  <a href="#players" data-sec="players"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.6 3.4-5.5 6.5-5.5s5.7 1.9 6.5 5.5"/><circle cx="17.5" cy="9" r="2.6"/><path d="M17 14.6c2.4.2 4 1.8 4.6 4.4"/></svg><span class="full">Our players</span><span class="short">Players</span></a>
+  <a href="#grade" data-sec="grade"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 21h8M12 17v4M6 4h12v5a6 6 0 0 1-12 0V4z"/><path d="M6 6H3v2a3 3 0 0 0 3 3M18 6h3v2a3 3 0 0 1-3 3"/></svg><span class="full">Grade leaders</span><span class="short">Grade</span></a>
+  <a href="#reports" data-sec="reports"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg><span class="full">Game reports</span><span class="short">Reports</span></a>
 </div></nav>
 
 <main class="wrap">
@@ -168,9 +214,12 @@
     <div><h2><span class="t">Upcoming</span></h2><div class="list" id="fixture"></div></div>
   </div></section>
 
-  <section id="players"><h2><span class="t">Our players</span> <small id="teamInfo"></small></h2><div class="scroll" id="playersTbl"></div>
+  <section id="players"><h2><span class="t">Our players</span> <small id="teamInfo"></small></h2><div class="scroll wide-only" id="playersTbl"></div>
+    <div class="pcards narrow-only" id="playerCards"></div>
+    <div class="wide-only">
     <h2 class="sub" style="margin-top:26px"><span class="t">Batting &amp; dismissals</span> <small>How each player's runs were scored and how they got out</small></h2>
     <div class="scroll" id="breakdownTbl"></div>
+    </div>
     <p class="key">Sun = runs off the sundries · B bowled · C caught · RO run out · S stumped · L LBW · M mankad</p>
   </section>
 
@@ -291,6 +340,22 @@ function render() {
       <td class="num">${gr ? gr + (d.gradeCount ? `<span style="color:var(--muted)">/${d.gradeCount}</span>` : '') : '–'}</td></tr>`; }).join('')}
     </tbody></table>` : '<div class="empty">No player stats yet.</div>';
 
+  // ---- player cards for phones (same data, plus each player's breakdown tucked inside)
+  const chip = (label, v, tot) => `<span class="${tot ? 'tot' : ''}">${label}<b>${v ?? 0}</b></span>`;
+  const scoreLbl = {Sun: 'Sundries', Other: 'Other', Total: 'Runs'}, outLbl = {B: 'Bowled', C: 'Caught', RO: 'Run out', S: 'Stumped', L: 'LBW', M: 'Mankad', Other: 'Other', Total: 'Outs'};
+  $('playerCards').innerHTML = players.length ? players.map(p => { const gr = gradeRank(p); return `<div class="pc">
+      <div class="pc-top"><div><div class="pc-name">${esc(p.name)}</div>
+        <div class="pc-rank">${gr ? `Grade rank <b style="color:var(--text)">${gr}</b>${d.gradeCount ? ' of ' + d.gradeCount : ''}` : 'Not ranked in grade'}</div></div>
+        <div class="pc-avg"><b class="${sign(p.avgNgv)}">${fmt(p.avgNgv)}</b><span>Avg NGV</span></div></div>
+      <div class="pc-stats">
+        <div><b>${p.games}</b><span>Games</span></div><div><b>${p.netRuns}</b><span>Net runs</span></div>
+        <div><b>${p.wickets}</b><span>Wkts</span></div><div><b>${p.runsAgainst}</b><span>Agst</span></div>
+        <div><b class="${sign(p.ngv)}">${p.ngv}</b><span>NGV</span></div></div>
+      ${p.scoring ? `<details><summary>Batting &amp; dismissals</summary>
+        <div class="chips-l">Scoring shots</div><div class="chips">${['0','1','2','3','4','5','7','Sun','Other','Total'].map(k => chip(scoreLbl[k] || k + 's', p.scoring[k], k === 'Total')).join('')}</div>
+        <div class="chips-l">How they got out</div><div class="chips">${['B','C','RO','S','L','M','Other','Total'].map(k => chip(outLbl[k], p.dismissals?.[k], k === 'Total')).join('')}</div>
+      </details>` : ''}</div>`; }).join('') : '<div class="empty">No player stats yet.</div>';
+
   // ---- full batting / dismissal breakdown
   const SC = ['0','1','2','3','4','5','7','Sun','Other','Total'], DM = ['B','C','RO','S','L','M','Other','Total'];
   const withBd = players.filter(p => p.scoring);
@@ -365,6 +430,17 @@ async function load() {
 $('moreGrade').onclick = () => { gradeLimit = gradeLimit > 10 ? 10 : 1e9; render(); };
 load();
 setInterval(load, REFRESH_MS);
+// Light up the tab for the section on screen.
+try {
+  const tabs = [...document.querySelectorAll('nav a[data-sec]')];
+  const seen = new Map();
+  const io = new IntersectionObserver(es => {
+    es.forEach(e => seen.set(e.target.id, e.isIntersecting ? e.intersectionRatio : 0));
+    let best = null, r = 0; seen.forEach((v, k) => { if (v > r) { r = v; best = k; } });
+    tabs.forEach(t => t.classList.toggle('on', t.dataset.sec === best));
+  }, {threshold: [0, .15, .3, .5, .75]});
+  tabs.forEach(t => { const el = document.getElementById(t.dataset.sec); if (el) io.observe(el); });
+} catch (e) {}
 setInterval(() => DATA && DATA.updatedAt && ($('updated').textContent = 'Data last changed ' + ago(DATA.updatedAt) + ' · checks every ~5 min'), 30000);
 </script>
 </body>
