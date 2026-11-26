@@ -140,14 +140,6 @@
  ],
  "fixture": [
   {
-   "round": 4,
-   "opponent": "M.A.P.S. Bouncers",
-   "day": "Thursday",
-   "date": "26 Nov 26",
-   "time": "8:15pm",
-   "court": "Court3"
-  },
-  {
    "round": 5,
    "opponent": "Hit Squad",
    "day": "Wednesday",
@@ -5062,5 +5054,8 @@
   "ladder": "https://results.sportskeepglobal.com/vic--box-hill-indoor-sports-centre/stadium-ladder.php?sp=41&g=4111&s=7912&embedded=",
   "datascore": "https://reports.datascore.com.au/IndoorCricket/TeamReports/17768"
  },
- "updatedAt": "2026-11-26T12:20:44+00:00"
+ "errors": {
+  "stats": "Locator.is_checked: Timeout 45000ms exceeded."
+ },
+ "updatedAt": "2026-11-26T13:45:27+00:00"
 }
