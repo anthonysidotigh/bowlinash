@@ -20,6 +20,23 @@
   },
   {
    "pos": 2,
+   "team": "Hit Squad",
+   "teamId": 13656,
+   "p": 4,
+   "w": 3,
+   "l": 1,
+   "d": 0,
+   "b": 0,
+   "ff": 0,
+   "fa": 0,
+   "for": 438,
+   "against": 360,
+   "pct": 121.67,
+   "bonus": 8,
+   "pts": 20
+  },
+  {
+   "pos": 3,
    "team": "Cutters",
    "teamId": 531,
    "p": 4,
@@ -36,36 +53,19 @@
    "pts": 15
   },
   {
-   "pos": 3,
-   "team": "Hit Squad",
-   "teamId": 13656,
-   "p": 3,
-   "w": 2,
-   "l": 1,
-   "d": 0,
-   "b": 0,
-   "ff": 0,
-   "fa": 0,
-   "for": 310,
-   "against": 260,
-   "pct": 119.23,
-   "bonus": 5,
-   "pts": 13
-  },
-  {
    "pos": 4,
    "team": "Rome Vi",
    "teamId": 11992,
-   "p": 3,
+   "p": 4,
    "w": 2,
-   "l": 1,
+   "l": 2,
    "d": 0,
    "b": 0,
    "ff": 0,
    "fa": 0,
-   "for": 248,
-   "against": 284,
-   "pct": 87.32,
+   "for": 348,
+   "against": 412,
+   "pct": 84.47,
    "bonus": 3,
    "pts": 11
   },
@@ -107,16 +107,16 @@
    "pos": 7,
    "team": "Bowlin Ashhh",
    "teamId": 13293,
-   "p": 3,
+   "p": 4,
    "w": 1,
-   "l": 2,
+   "l": 3,
    "d": 0,
    "b": 0,
    "ff": 0,
    "fa": 0,
-   "for": 275,
-   "against": 329,
-   "pct": 83.59,
+   "for": 369,
+   "against": 473,
+   "pct": 78.01,
    "bonus": 2,
    "pts": 6
   },
@@ -179,6 +179,14 @@
    "date": "18 Nov 26",
    "result": "Lose",
    "score": "45-85",
+   "points": 0
+  },
+  {
+   "round": 4,
+   "opponent": "M.A.P.S. Bouncers",
+   "date": "26 Nov 26",
+   "result": "Lose",
+   "score": "94-144",
    "points": 0
   }
  ],
@@ -5054,5 +5062,5 @@
   "ladder": "https://results.sportskeepglobal.com/vic--box-hill-indoor-sports-centre/stadium-ladder.php?sp=41&g=4111&s=7912&embedded=",
   "datascore": "https://reports.datascore.com.au/IndoorCricket/TeamReports/17768"
  },
- "updatedAt": "2026-11-26T11:53:38+00:00"
+ "updatedAt": "2026-11-26T12:20:44+00:00"
 }
