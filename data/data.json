@@ -4255,7 +4255,7 @@
    "avgNgv": 11
   },
   {
-   "rank": 511,
+   "rank": 512,
    "playerId": 566717,
    "name": "James Roche",
    "team": "BOWLIN ASHHH",
@@ -4291,7 +4291,7 @@
    "avgNgv": 10
   },
   {
-   "rank": 808,
+   "rank": 806,
    "playerId": 566720,
    "name": "John Korasidis",
    "team": "BOWLIN ASHHH",
@@ -4327,7 +4327,7 @@
    "avgNgv": 5.67
   },
   {
-   "rank": 812,
+   "rank": 810,
    "playerId": 566718,
    "name": "Liam Roche",
    "team": "BOWLIN ASHHH",
@@ -4363,7 +4363,7 @@
    "avgNgv": 5.6
   },
   {
-   "rank": 888,
+   "rank": 889,
    "playerId": 569095,
    "name": "Steven Boscacci",
    "team": "BOWLIN ASHHH",
@@ -4471,7 +4471,7 @@
    "avgNgv": 3
   },
   {
-   "rank": 1244,
+   "rank": 1245,
    "playerId": 566719,
    "name": "Alex Desaram",
    "team": "BOWLIN ASHHH",
@@ -4543,7 +4543,7 @@
    "avgNgv": -4
   },
   {
-   "rank": 1801,
+   "rank": 1804,
    "playerId": 605573,
    "name": "Harrison",
    "team": "BOWLIN ASHHH",
@@ -4579,7 +4579,7 @@
    "avgNgv": -6
   },
   {
-   "rank": 2430,
+   "rank": 2432,
    "playerId": 604946,
    "name": "Joshua Sykes",
    "team": "BOWLIN ASHHH",
@@ -4615,7 +4615,7 @@
    "avgNgv": -19.5
   },
   {
-   "rank": 2615,
+   "rank": 2617,
    "playerId": 605098,
    "name": "Arnav",
    "team": "BOWLIN ASHHH",
@@ -4651,7 +4651,7 @@
    "avgNgv": -34
   }
  ],
- "gradeCount": 2663,
+ "gradeCount": 2665,
  "gradeInfo": "Showing grade data from 30/05/2026 to 26/11/2026.",
  "games": [
   {
@@ -4910,8 +4910,5 @@
   "ladder": "https://results.sportskeepglobal.com/vic--box-hill-indoor-sports-centre/stadium-ladder.php?sp=41&g=4111&s=7912&embedded=",
   "datascore": "https://reports.datascore.com.au/IndoorCricket/TeamReports/17768"
  },
- "errors": {
-  "stats": "Locator.is_checked: Timeout 45000ms exceeded."
- },
- "updatedAt": "2026-11-26T09:11:49+00:00"
+ "updatedAt": "2026-11-26T10:18:57+00:00"
 }
