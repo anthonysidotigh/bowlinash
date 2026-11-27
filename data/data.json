@@ -3284,6 +3284,42 @@
   },
   {
    "rank": 73,
+   "playerId": 583061,
+   "name": "Grant Watson",
+   "team": "MANNINGHAM",
+   "games": 3,
+   "scoring": {
+    "0": 3,
+    "1": 6,
+    "2": 9,
+    "3": 2,
+    "4": 5,
+    "5": 1,
+    "7": 2,
+    "Sun": 5,
+    "Other": 0,
+    "Total": 90
+   },
+   "dismissals": {
+    "B": 1,
+    "C": 2,
+    "RO": 1,
+    "S": 0,
+    "L": 0,
+    "M": 0,
+    "Other": 0,
+    "Total": 4
+   },
+   "runsScored": 90,
+   "outs": 4,
+   "netRuns": 78,
+   "runsAgainst": -3,
+   "wickets": 7,
+   "ngv": 81,
+   "avgNgv": 27
+  },
+  {
+   "rank": 74,
    "playerId": 588527,
    "name": "Saif",
    "team": "VISION BUILDERS",
@@ -3319,7 +3355,7 @@
    "avgNgv": 27
   },
   {
-   "rank": 74,
+   "rank": 75,
    "playerId": 591579,
    "name": "Abhi",
    "team": "SINGLE PLAYERS 2026",
@@ -3355,7 +3391,7 @@
    "avgNgv": 27
   },
   {
-   "rank": 75,
+   "rank": 76,
    "playerId": 593048,
    "name": "Ansh",
    "team": "HOME BUY HELPER",
@@ -3391,7 +3427,7 @@
    "avgNgv": 27
   },
   {
-   "rank": 76,
+   "rank": 77,
    "playerId": 593938,
    "name": "Ninad G",
    "team": "VISION CONSULTANTS",
@@ -3427,7 +3463,7 @@
    "avgNgv": 27
   },
   {
-   "rank": 77,
+   "rank": 78,
    "playerId": 603379,
    "name": "Ross",
    "team": "SECONDARY EXTRA TEAM",
@@ -3463,7 +3499,7 @@
    "avgNgv": 27
   },
   {
-   "rank": 78,
+   "rank": 79,
    "playerId": 604266,
    "name": "Ozzy",
    "team": "PRONG KINGS",
@@ -3499,7 +3535,7 @@
    "avgNgv": 27
   },
   {
-   "rank": 79,
+   "rank": 80,
    "playerId": 604503,
    "name": "Paul",
    "team": "CRICKET SINGLES",
@@ -3535,7 +3571,7 @@
    "avgNgv": 27
   },
   {
-   "rank": 80,
+   "rank": 81,
    "playerId": 605487,
    "name": "Arnav",
    "team": "WHY DID YOU REDEEM IT",
@@ -3571,7 +3607,7 @@
    "avgNgv": 27
   },
   {
-   "rank": 81,
+   "rank": 82,
    "playerId": 586885,
    "name": "Aj",
    "team": "BASKET BOWLERS",
@@ -3607,7 +3643,7 @@
    "avgNgv": 26
   },
   {
-   "rank": 82,
+   "rank": 83,
    "playerId": 587477,
    "name": "Ansh",
    "team": "VISION CONSULTANTS",
@@ -3643,7 +3679,7 @@
    "avgNgv": 26
   },
   {
-   "rank": 83,
+   "rank": 84,
    "playerId": 599318,
    "name": "Maulik",
    "team": "MAIL EXPRESS",
@@ -3679,7 +3715,7 @@
    "avgNgv": 26
   },
   {
-   "rank": 84,
+   "rank": 85,
    "playerId": 605468,
    "name": "Shaaz",
    "team": "HOME BUY HELPER",
@@ -3713,42 +3749,6 @@
    "wickets": 3,
    "ngv": 26,
    "avgNgv": 26
-  },
-  {
-   "rank": 85,
-   "playerId": 583061,
-   "name": "Grant Watson",
-   "team": "MANNINGHAM",
-   "games": 4,
-   "scoring": {
-    "0": 4,
-    "1": 7,
-    "2": 12,
-    "3": 2,
-    "4": 5,
-    "5": 2,
-    "7": 3,
-    "Sun": 10,
-    "Other": 0,
-    "Total": 119
-   },
-   "dismissals": {
-    "B": 1,
-    "C": 2,
-    "RO": 2,
-    "S": 0,
-    "L": 0,
-    "M": 0,
-    "Other": 0,
-    "Total": 5
-   },
-   "runsScored": 119,
-   "outs": 5,
-   "netRuns": 104,
-   "runsAgainst": 1,
-   "wickets": 9,
-   "ngv": 103,
-   "avgNgv": 25.75
   },
   {
    "rank": 86,
@@ -4291,7 +4291,7 @@
    "avgNgv": 24
   },
   {
-   "rank": 456,
+   "rank": 455,
    "playerId": 566060,
    "name": "Anthony Sidoti",
    "team": "BOWLIN ASHHH",
@@ -4363,7 +4363,7 @@
    "avgNgv": 10
   },
   {
-   "rank": 677,
+   "rank": 676,
    "playerId": 566718,
    "name": "Liam Roche",
    "team": "BOWLIN ASHHH",
@@ -4399,7 +4399,7 @@
    "avgNgv": 7.83
   },
   {
-   "rank": 802,
+   "rank": 801,
    "playerId": 605879,
    "name": "Rail",
    "team": "BOWLIN ASHHH",
@@ -4435,7 +4435,7 @@
    "avgNgv": 6
   },
   {
-   "rank": 891,
+   "rank": 887,
    "playerId": 569095,
    "name": "Steven Boscacci",
    "team": "BOWLIN ASHHH",
@@ -4471,7 +4471,7 @@
    "avgNgv": 4.4
   },
   {
-   "rank": 1016,
+   "rank": 1013,
    "playerId": 604832,
    "name": "Rair",
    "team": "BOWLIN ASHHH",
@@ -4507,7 +4507,7 @@
    "avgNgv": 3
   },
   {
-   "rank": 1017,
+   "rank": 1014,
    "playerId": 604945,
    "name": "Rair",
    "team": "BOWLIN ASHHH",
@@ -4543,7 +4543,7 @@
    "avgNgv": 3
   },
   {
-   "rank": 1245,
+   "rank": 1244,
    "playerId": 566719,
    "name": "Alex Desaram",
    "team": "BOWLIN ASHHH",
@@ -4579,7 +4579,7 @@
    "avgNgv": 0.5
   },
   {
-   "rank": 1411,
+   "rank": 1409,
    "playerId": 566720,
    "name": "John Korasidis",
    "team": "BOWLIN ASHHH",
@@ -4615,7 +4615,7 @@
    "avgNgv": -1.25
   },
   {
-   "rank": 1655,
+   "rank": 1653,
    "playerId": 605572,
    "name": "Anthony",
    "team": "BOWLIN ASHHH",
@@ -4651,7 +4651,7 @@
    "avgNgv": -4
   },
   {
-   "rank": 1817,
+   "rank": 1813,
    "playerId": 605573,
    "name": "Harrison",
    "team": "BOWLIN ASHHH",
@@ -4687,7 +4687,7 @@
    "avgNgv": -6
   },
   {
-   "rank": 2424,
+   "rank": 2420,
    "playerId": 604946,
    "name": "Joshua Sykes",
    "team": "BOWLIN ASHHH",
@@ -4723,7 +4723,7 @@
    "avgNgv": -18.8
   },
   {
-   "rank": 2628,
+   "rank": 2624,
    "playerId": 605098,
    "name": "Arnav",
    "team": "BOWLIN ASHHH",
@@ -4759,7 +4759,7 @@
    "avgNgv": -34
   },
   {
-   "rank": 2648,
+   "rank": 2644,
    "playerId": 605878,
    "name": "Josh",
    "team": "BOWLIN ASHHH",
@@ -4795,7 +4795,7 @@
    "avgNgv": -38
   }
  ],
- "gradeCount": 2677,
+ "gradeCount": 2673,
  "gradeInfo": "Showing grade data from 31/05/2026 to 27/11/2026.",
  "games": [
   {
@@ -5054,5 +5054,5 @@
   "ladder": "https://results.sportskeepglobal.com/vic--box-hill-indoor-sports-centre/stadium-ladder.php?sp=41&g=4111&s=7912&embedded=",
   "datascore": "https://reports.datascore.com.au/IndoorCricket/TeamReports/17768"
  },
- "updatedAt": "2026-11-26T22:21:17+00:00"
+ "updatedAt": "2026-11-27T08:04:28+00:00"
 }
