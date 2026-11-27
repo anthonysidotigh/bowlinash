@@ -688,7 +688,7 @@
    "avgNgv": -38
   }
  ],
- "teamInfo": "Showing team data from 31/05/2026 to 27/11/2026.",
+ "teamInfo": "Showing team data from 1/06/2026 to 28/11/2026.",
  "gradeTop": [
   {
    "rank": 1,
@@ -4796,7 +4796,7 @@
   }
  ],
  "gradeCount": 2650,
- "gradeInfo": "Showing grade data from 31/05/2026 to 27/11/2026.",
+ "gradeInfo": "Showing grade data from 1/06/2026 to 28/11/2026.",
  "games": [
   {
    "key": "2026-11-26_0817_m-a-p-s-bouncers",
@@ -5054,5 +5054,5 @@
   "ladder": "https://results.sportskeepglobal.com/vic--box-hill-indoor-sports-centre/stadium-ladder.php?sp=41&g=4111&s=7912&embedded=",
   "datascore": "https://reports.datascore.com.au/IndoorCricket/TeamReports/17768"
  },
- "updatedAt": "2026-11-27T11:54:45+00:00"
+ "updatedAt": "2026-11-27T14:00:11+00:00"
 }
