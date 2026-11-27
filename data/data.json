@@ -3719,36 +3719,36 @@
    "playerId": 86819,
    "name": "Shreyansh Shah",
    "team": "REGULATORS",
-   "games": 13,
+   "games": 12,
    "scoring": {
-    "0": 14,
-    "1": 39,
-    "2": 18,
-    "3": 22,
-    "4": 12,
+    "0": 11,
+    "1": 35,
+    "2": 17,
+    "3": 21,
+    "4": 11,
     "5": 9,
-    "7": 14,
-    "Sun": 26,
-    "Other": 20,
-    "Total": 434
+    "7": 13,
+    "Sun": 22,
+    "Other": 19,
+    "Total": 405
    },
    "dismissals": {
     "B": 1,
-    "C": 7,
+    "C": 6,
     "RO": 8,
     "S": 4,
     "L": 0,
     "M": 0,
     "Other": 0,
-    "Total": 20
+    "Total": 19
    },
-   "runsScored": 434,
-   "outs": 20,
-   "netRuns": 362,
-   "runsAgainst": 29,
-   "wickets": 27,
-   "ngv": 333,
-   "avgNgv": 25.62
+   "runsScored": 405,
+   "outs": 19,
+   "netRuns": 339,
+   "runsAgainst": 31,
+   "wickets": 25,
+   "ngv": 308,
+   "avgNgv": 25.67
   },
   {
    "rank": 86,
@@ -4187,36 +4187,36 @@
    "playerId": 514726,
    "name": "Dhiral Merchant",
    "team": "PACKAGE",
-   "games": 12,
+   "games": 11,
    "scoring": {
     "0": 6,
-    "1": 24,
-    "2": 19,
-    "3": 16,
+    "1": 22,
+    "2": 15,
+    "3": 14,
     "4": 6,
     "5": 12,
-    "7": 17,
+    "7": 16,
     "Sun": 16,
     "Other": 10,
-    "Total": 390
+    "Total": 366
    },
    "dismissals": {
     "B": 0,
-    "C": 13,
+    "C": 12,
     "RO": 5,
     "S": 0,
     "L": 0,
     "M": 0,
     "Other": 0,
-    "Total": 18
+    "Total": 17
    },
-   "runsScored": 390,
-   "outs": 18,
-   "netRuns": 321,
-   "runsAgainst": 29,
-   "wickets": 40,
-   "ngv": 292,
-   "avgNgv": 24.33
+   "runsScored": 366,
+   "outs": 17,
+   "netRuns": 300,
+   "runsAgainst": 32,
+   "wickets": 36,
+   "ngv": 268,
+   "avgNgv": 24.36
   },
   {
    "rank": 99,
@@ -4363,7 +4363,7 @@
    "avgNgv": 10
   },
   {
-   "rank": 673,
+   "rank": 672,
    "playerId": 566718,
    "name": "Liam Roche",
    "team": "BOWLIN ASHHH",
@@ -4399,7 +4399,7 @@
    "avgNgv": 7.83
   },
   {
-   "rank": 798,
+   "rank": 797,
    "playerId": 605879,
    "name": "Rail",
    "team": "BOWLIN ASHHH",
@@ -4435,7 +4435,7 @@
    "avgNgv": 6
   },
   {
-   "rank": 883,
+   "rank": 882,
    "playerId": 569095,
    "name": "Steven Boscacci",
    "team": "BOWLIN ASHHH",
@@ -4471,7 +4471,7 @@
    "avgNgv": 4.4
   },
   {
-   "rank": 1009,
+   "rank": 1008,
    "playerId": 604832,
    "name": "Rair",
    "team": "BOWLIN ASHHH",
@@ -4507,7 +4507,7 @@
    "avgNgv": 3
   },
   {
-   "rank": 1010,
+   "rank": 1009,
    "playerId": 604945,
    "name": "Rair",
    "team": "BOWLIN ASHHH",
@@ -4543,7 +4543,7 @@
    "avgNgv": 3
   },
   {
-   "rank": 1240,
+   "rank": 1238,
    "playerId": 566719,
    "name": "Alex Desaram",
    "team": "BOWLIN ASHHH",
@@ -4579,7 +4579,7 @@
    "avgNgv": 0.5
   },
   {
-   "rank": 1405,
+   "rank": 1404,
    "playerId": 566720,
    "name": "John Korasidis",
    "team": "BOWLIN ASHHH",
@@ -4615,7 +4615,7 @@
    "avgNgv": -1.25
   },
   {
-   "rank": 1649,
+   "rank": 1648,
    "playerId": 605572,
    "name": "Anthony",
    "team": "BOWLIN ASHHH",
@@ -4651,7 +4651,7 @@
    "avgNgv": -4
   },
   {
-   "rank": 1806,
+   "rank": 1804,
    "playerId": 605573,
    "name": "Harrison",
    "team": "BOWLIN ASHHH",
@@ -4687,7 +4687,7 @@
    "avgNgv": -6
   },
   {
-   "rank": 2414,
+   "rank": 2409,
    "playerId": 604946,
    "name": "Joshua Sykes",
    "team": "BOWLIN ASHHH",
@@ -4723,7 +4723,7 @@
    "avgNgv": -18.8
   },
   {
-   "rank": 2615,
+   "rank": 2610,
    "playerId": 605098,
    "name": "Arnav",
    "team": "BOWLIN ASHHH",
@@ -4759,7 +4759,7 @@
    "avgNgv": -34
   },
   {
-   "rank": 2635,
+   "rank": 2630,
    "playerId": 605878,
    "name": "Josh",
    "team": "BOWLIN ASHHH",
@@ -4795,7 +4795,7 @@
    "avgNgv": -38
   }
  ],
- "gradeCount": 2663,
+ "gradeCount": 2658,
  "gradeInfo": "Showing grade data from 31/05/2026 to 27/11/2026.",
  "games": [
   {
@@ -5054,5 +5054,5 @@
   "ladder": "https://results.sportskeepglobal.com/vic--box-hill-indoor-sports-centre/stadium-ladder.php?sp=41&g=4111&s=7912&embedded=",
   "datascore": "https://reports.datascore.com.au/IndoorCricket/TeamReports/17768"
  },
- "updatedAt": "2026-11-27T08:57:25+00:00"
+ "updatedAt": "2026-11-27T09:59:57+00:00"
 }
