@@ -5054,5 +5054,8 @@
   "ladder": "https://results.sportskeepglobal.com/vic--box-hill-indoor-sports-centre/stadium-ladder.php?sp=41&g=4111&s=7912&embedded=",
   "datascore": "https://reports.datascore.com.au/IndoorCricket/TeamReports/17768"
  },
- "updatedAt": "2026-11-27T15:54:38+00:00"
+ "errors": {
+  "stats": "Locator.is_checked: Timeout 45000ms exceeded."
+ },
+ "updatedAt": "2026-11-27T18:33:44+00:00"
 }
