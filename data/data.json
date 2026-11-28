@@ -4327,7 +4327,7 @@
    "avgNgv": 11
   },
   {
-   "rank": 509,
+   "rank": 510,
    "playerId": 566717,
    "name": "James Roche",
    "team": "BOWLIN ASHHH",
@@ -4363,7 +4363,7 @@
    "avgNgv": 10
   },
   {
-   "rank": 667,
+   "rank": 666,
    "playerId": 566718,
    "name": "Liam Roche",
    "team": "BOWLIN ASHHH",
@@ -4399,7 +4399,7 @@
    "avgNgv": 7.83
   },
   {
-   "rank": 793,
+   "rank": 791,
    "playerId": 605879,
    "name": "Rail",
    "team": "BOWLIN ASHHH",
@@ -4435,7 +4435,7 @@
    "avgNgv": 6
   },
   {
-   "rank": 878,
+   "rank": 875,
    "playerId": 569095,
    "name": "Steven Boscacci",
    "team": "BOWLIN ASHHH",
@@ -4471,7 +4471,7 @@
    "avgNgv": 4.4
   },
   {
-   "rank": 1002,
+   "rank": 1000,
    "playerId": 604832,
    "name": "Rair",
    "team": "BOWLIN ASHHH",
@@ -4507,7 +4507,7 @@
    "avgNgv": 3
   },
   {
-   "rank": 1003,
+   "rank": 1001,
    "playerId": 604945,
    "name": "Rair",
    "team": "BOWLIN ASHHH",
@@ -4543,7 +4543,7 @@
    "avgNgv": 3
   },
   {
-   "rank": 1236,
+   "rank": 1232,
    "playerId": 566719,
    "name": "Alex Desaram",
    "team": "BOWLIN ASHHH",
@@ -4579,7 +4579,7 @@
    "avgNgv": 0.5
   },
   {
-   "rank": 1402,
+   "rank": 1397,
    "playerId": 566720,
    "name": "John Korasidis",
    "team": "BOWLIN ASHHH",
@@ -4615,7 +4615,7 @@
    "avgNgv": -1.25
   },
   {
-   "rank": 1642,
+   "rank": 1637,
    "playerId": 605572,
    "name": "Anthony",
    "team": "BOWLIN ASHHH",
@@ -4651,7 +4651,7 @@
    "avgNgv": -4
   },
   {
-   "rank": 1801,
+   "rank": 1795,
    "playerId": 605573,
    "name": "Harrison",
    "team": "BOWLIN ASHHH",
@@ -4687,7 +4687,7 @@
    "avgNgv": -6
   },
   {
-   "rank": 2402,
+   "rank": 2392,
    "playerId": 604946,
    "name": "Joshua Sykes",
    "team": "BOWLIN ASHHH",
@@ -4723,7 +4723,7 @@
    "avgNgv": -18.8
   },
   {
-   "rank": 2602,
+   "rank": 2596,
    "playerId": 605098,
    "name": "Arnav",
    "team": "BOWLIN ASHHH",
@@ -4759,7 +4759,7 @@
    "avgNgv": -34
   },
   {
-   "rank": 2622,
+   "rank": 2616,
    "playerId": 605878,
    "name": "Josh",
    "team": "BOWLIN ASHHH",
@@ -4795,7 +4795,7 @@
    "avgNgv": -38
   }
  ],
- "gradeCount": 2650,
+ "gradeCount": 2644,
  "gradeInfo": "Showing grade data from 1/06/2026 to 28/11/2026.",
  "games": [
   {
@@ -5054,5 +5054,5 @@
   "ladder": "https://results.sportskeepglobal.com/vic--box-hill-indoor-sports-centre/stadium-ladder.php?sp=41&g=4111&s=7912&embedded=",
   "datascore": "https://reports.datascore.com.au/IndoorCricket/TeamReports/17768"
  },
- "updatedAt": "2026-11-28T05:26:34+00:00"
+ "updatedAt": "2026-11-28T06:25:04+00:00"
 }
